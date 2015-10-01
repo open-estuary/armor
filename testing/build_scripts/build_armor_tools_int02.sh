@@ -23,40 +23,23 @@ fi
 echo "Building the Debug Tool $1..."
 
 if [ "$1" = 'tiptop' ]; then
-    echo "building dependency component byacc"
-    http://invisible-island.net/datafiles/release/byacc.tar.gz
-    tar -xvzf byacc.tar.gz
-    cd byacc-20150711
-    ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
-    make
-    make install
 
-    echo "building dependency component flex"
-    wget http://sourceforge.net/projects/flex/files/flex/2.5.4.a/flex-2.5.4a.tar.gz
-    tar -xvzf flex-2.5.4a.tar.gz
-    cd flex-2.5
-    ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
-    make
-    make install
+    echo "installing dependency components"
 
+    apt-get install flex
+    apt-get install libfl-dev
+    apt-get install bison
+    apt-get install bison++
+    
+    apt-get install help2man
+    apt-get install byacc
+    
     echo "building dependency component textinfo"
     wget http://ftp.gnu.org/gnu/texinfo/texinfo-6.0.tar.gz
     tar -xvzf texinfo-6.0.tar.gz
     cd texinfo-6.0/
     ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
     make 
-    make install
-
-    echo "install dependency component help2man"
-    apt-get install help2man
-    
-    echo "building dependency component bison"
-    git clone  git://git.sv.gnu.org/bison.git
-    cd bison
-    git submodule update --init
-    ./bootstrap
-    ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
-    make
     make install
 
     echo "building tiptop..."
@@ -66,6 +49,7 @@ if [ "$1" = 'tiptop' ]; then
     ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
     make
     make install
+    exit
 fi
 
 if [ "$1" = 'blktrace' ]; then
@@ -76,6 +60,7 @@ if [ "$1" = 'blktrace' ]; then
     ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
     make
     make install
+    exit
 fi
 
 if [ "$1" = 'nicstat' ]; then
@@ -85,15 +70,7 @@ if [ "$1" = 'nicstat' ]; then
     ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
     make
     make install
-fi
-
-if [ "$1" = 'nicstat' ]; then
-    echo "building nicstat..."
-    git clone https://github.com/sysperf/nicstat.git
-    cd nicstat
-    ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
-    make
-    make install
+    exit
 fi
 
 if [ "$1" = 'memwatch' ]; then
@@ -104,6 +81,7 @@ if [ "$1" = 'memwatch' ]; then
     make 
 #    ./a.out
 #    vi memwatch.log
+    exit
 fi
 
 echo "Building Debug Tool $1 is not supported."

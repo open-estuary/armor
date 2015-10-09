@@ -17,6 +17,10 @@ if [ "$1" = '-h' ]; then
     echo "Supported Tools List:"
     echo "tiptop"
     echo "blktrace"
+    echo "nicstat"
+    echo "lldptool"
+    echo "memwatch"
+    echo "crash"
     exit
 fi
 
@@ -24,6 +28,7 @@ echo "Building the Debug Tool $1..."
 
 if [ "$1" = 'tiptop' ]; then
 
+    echo "Warning! building tiptop worked only on ARM64 RFS"
     echo "installing dependency components"
 
     apt-get install flex
@@ -64,6 +69,7 @@ if [ "$1" = 'blktrace' ]; then
 fi
 
 if [ "$1" = 'nicstat' ]; then
+    echo "Warning! building nicstat worked only on ARM64 RFS"
     echo "building nicstat..."
     git clone https://github.com/sysperf/nicstat.git
     cd nicstat
@@ -83,5 +89,34 @@ if [ "$1" = 'memwatch' ]; then
 #    vi memwatch.log
     exit
 fi
+
+if [ "$1" = 'lldptool' ]; then
+    echo "building lldpad work only on Ubuntu arm64 RFS only"
+    echo "building lldpad..."
+    apt-get install libtool
+    apt-get install libconfig-dev
+    apt-get install libnl-3-dev
+    apt-get install readline-devel
+    
+    git clone git://open-lldp.org/open-lldp.git
+    #Working build solution on Ubuntu ARM64 RFS
+    cd open-lldp
+    ./bootstrap.sh
+    ./configure --build=aarch64-unknown-linux-gnu
+    make
+    exit
+fi
+
+if [ "$1" = 'crash' ]; then
+    echo "building crash work only on arm64 RFS only"
+    echo "building crash..."
+
+    git clone  https://github.com/crash-utility/crash
+    #Working build solution on ARM64 RFS
+    cd crash 
+    make
+    exit
+fi
+
 
 echo "Building Debug Tool $1 is not supported."

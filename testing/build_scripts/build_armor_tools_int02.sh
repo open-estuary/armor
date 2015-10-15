@@ -24,6 +24,7 @@ if [ "$1" = '-h' ]; then
     exit
 fi
 
+echo "Warning!. This build script work only on D02 Ubuntu platform"
 echo "Building the Debug Tool $1..."
 
 if [ "$1" = 'tiptop' ]; then
@@ -43,7 +44,7 @@ if [ "$1" = 'tiptop' ]; then
     wget http://ftp.gnu.org/gnu/texinfo/texinfo-6.0.tar.gz
     tar -xvzf texinfo-6.0.tar.gz
     cd texinfo-6.0/
-    ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
+    ./configure  
     make 
     make install
 
@@ -51,7 +52,7 @@ if [ "$1" = 'tiptop' ]; then
     wget http://tiptop.gforge.inria.fr/releases/tiptop-2.3.tar.gz
     tar -xvzf tiptop-2.3.tar.gz
     cd tiptop-2.3/
-    ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
+    ./configure  
     make
     make install
     exit
@@ -62,7 +63,7 @@ if [ "$1" = 'blktrace' ]; then
     git clone git://git.kernel.dk/blktrace.git
     git checkout 43fc870ce04e963def45dfc0d1ed4ea21ef10d4b
     cd blktrace
-    ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
+    ./configure  
     make
     make install
     exit
@@ -73,7 +74,7 @@ if [ "$1" = 'nicstat' ]; then
     echo "building nicstat..."
     git clone https://github.com/sysperf/nicstat.git
     cd nicstat
-    ./configure  CC=aarch64-linux-gnu-gcc -prefix=/usr/local
+    ./configure  
     make
     make install
     exit

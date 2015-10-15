@@ -20,6 +20,7 @@ if [ "$1" = '-h' ]; then
     exit
 fi
 
+echo "This build script work only on D02 Ubuntu platform"
 echo "Building the Debug Tool $1..."
 
 if [ "$1" = 'dmidecode' ]; then

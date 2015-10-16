@@ -18,7 +18,17 @@ fi
 if [ "$1" = '-h' ]; then
     echo "Usage: sh run_armor_tools_int02.sh <tool's name>"
     echo "Supported Tools List:"
-    echo "top"
+    echo "tiptop"
+    echo "iotop"
+    echo "blktrace"
+    echo "dstat"
+    echo "procps"
+    echo "nicstat"
+    echo "lldptool"
+    echo "oprofile"
+    echo "latencytop"
+    echo "systemtap"
+    echo "crash"
     exit
 fi
 

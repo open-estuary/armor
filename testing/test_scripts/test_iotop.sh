@@ -9,7 +9,7 @@
 #!/bin/bash
     
 #iotop
-iotop -v
+iotop --version
 status=$?
 if test $status -eq 0
 then
@@ -20,7 +20,7 @@ else
 fi
 
 echo "iotop -b -n 3"
-iotop
+iotop -b -n 3
 status=$?
 if test $status -eq 0
 then

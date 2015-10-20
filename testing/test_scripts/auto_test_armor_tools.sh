@@ -49,6 +49,7 @@ if [ "$1" = '-h' ]; then
     echo "latencytop"
     echo "systemtap"
     echo "crash"
+    echo "perf"
     exit
 fi
 
@@ -325,6 +326,13 @@ status=$?
 if test $status -ne 0
 then
    echo "running test_crash.sh failed"
+fi
+
+sh test_perf.sh
+status=$?
+if test $status -ne 0
+then
+   echo "running test_perf.sh failed"
 fi
 
 echo "Auto Testing of Armor Tools Done"

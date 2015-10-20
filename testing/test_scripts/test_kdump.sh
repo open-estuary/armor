@@ -9,8 +9,5 @@
 #!/bin/bash
     
 #kdump/kexec   
-if [ "$1" = 'kdump' ] ;  then
-    echo "Testing kdump/kexec is not presently supported!"
-    exit
-fi
-
+echo "Testing kdump/kexec is not presently supported!"
+exit

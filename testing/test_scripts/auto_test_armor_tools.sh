@@ -52,7 +52,7 @@ if [ "$1" = '-h' ]; then
     exit
 fi
 
-echo "Testing suported Armor Tools..."
+echo "Testing supported Armor Tools..."
 
 sh test_ltrace.sh
 status=$?

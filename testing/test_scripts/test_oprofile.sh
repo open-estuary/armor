@@ -20,7 +20,7 @@ else
 fi
 
 echo "operf"
-operf   
+operf ./test_app   
 status=$?
 if test $status -eq 0
 then

@@ -20,14 +20,14 @@ else
    exit
 fi
 
-echo "ltrace ./file"
-ltrace ./file
+echo "ltrace ./test_app"
+ltrace ./test_app
 status=$?
 if test $status -eq 0 
 then 
-   echo "Command ltrace ./file passed"
+   echo "Command ltrace ./test_app passed"
 else   
-   echo "Command ltrace ./file failed"
+   echo "Command ltrace ./test_app failed"
    exit
 fi
 exit

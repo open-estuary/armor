@@ -19,14 +19,14 @@ else
    exit
 fi
 
-echo "tiptop"
-tiptop
+echo "tiptop -d 2 -n 4"
+tiptop -d 2 -n 4
 status=$?
 if test $status -eq 0 
 then 
-   echo "Command tiptop passed"
+   echo "Command tiptop -d 2 -n 4 passed"
 else   
-   echo "Command tiptop failed"
+   echo "Command tiptop -d 2 -n 4 failed"
    exit
 fi
 exit

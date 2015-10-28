@@ -1,10 +1,5 @@
 VERSION=
 
-#ARCH=arm64
-CROSS_COMPILE=aarch64-linux-gnu-
-#CC  = aarch64-linux-gnu-gcc
-
-
 obj-m += kprobe_test.o
 kprobe_test-objs := kprobe_sample.o
 

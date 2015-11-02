@@ -20,7 +20,7 @@ fi
 export KPROBES_KERN_DIR=$1 
 echo $KPROBES_KERN_DIR
 
-cd ../source/kprobes_test/
+cd ../source/test_code/kprobes_test_code/
 
 make
 

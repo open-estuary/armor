@@ -19,7 +19,6 @@ echo "Building the lttng's kernel module..."
 cd ../source/lttng-modules-2.6.4/
 make KERNELDIR=$1 
 #install lttng modules to the rootfs. modify and run lttng_modules_install.sh
-echo "To install lttng modules to the rootfs, please modify and run lttng_modules_install.sh"
 sh lttng_modules_install.sh $1 $2  
 cd -
 
@@ -30,7 +29,4 @@ cd ../source/test_code/lttng_ust_test_code/
 sudo cp lttng_ust_test  $2/usr/local/armor/test_scripts 
 cd -
 
-echo "For testing please copy binary lttng_ust_test and test scripts test_lttng_kernel.sh and test_lttng_ust.sh to the rootfs"
-
-echo "Building the Kprobes's test code finished"
 

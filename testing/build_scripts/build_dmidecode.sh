@@ -9,7 +9,7 @@
 SOURCE_DIR="../source"
 
 if  [ "$1" = '' ]; then
-    echo "Usage: sh build_armor_tool_int01.sh <CC - cross compiler>"
+    echo "Usage: sh build_dmidecode.sh <CC - cross compiler>"
     exit
 fi
 

@@ -25,8 +25,9 @@ cd -
 
 echo "Building the lttng userspace test code ..."
 cd ../source/test_code/lttng_ust_test_code/
-make  
-sudo cp lttng_ust_test  $2/usr/local/armor/testing/test_scripts 
+#make  
+# copy prebuilt binary on D02 to rootfs.
+sudo cp lttng_ust_test  $2/usr/local/armor/test_scripts 
 cd -
 
 echo "For testing please copy binary lttng_ust_test and test scripts test_lttng_kernel.sh and test_lttng_ust.sh to the rootfs"

@@ -1,0 +1,21 @@
+LTTNG
+=====
+
+Ubuntu
+=====
+The LTTng PPA offers the latest stable versions of LTTng packages. To get packages from the PPA, follow these steps:
+apt-add-repository ppa:lttng/ppa
+apt-get update
+apt-get install lttng-tools
+apt-get install lttng-modules-dkms
+apt-get install liblttng-ust-dev
+
+- Installtion and buiding of lttng kernel modules (lttng-modules-dkms) using apt-get does not work on estuary Ubuntu platform. 
+  Thus lttng module build from source code and installed into rootfs.
+  
+  The source code of lttng kernel module worked is lttng-modules-2.6.4.tar.bz2 (ubuntu version)
+  downloaded from https://lttng.org/download/#build-from-source
+
+
+
+

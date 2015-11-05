@@ -1,0 +1,9 @@
+#ifndef CREATE_SYSCALL_TABLE
+
+#else	/* CREATE_SYSCALL_TABLE */
+
+#define OVERRIDE_TABLE_32_mmap
+TRACE_SYSCALL_TABLE(mmap, mmap, 90, 6)
+
+#endif /* CREATE_SYSCALL_TABLE */
+

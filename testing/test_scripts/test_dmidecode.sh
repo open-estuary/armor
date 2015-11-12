@@ -9,25 +9,25 @@
 #!/bin/bash
     
 #dmidecode
-/usr/local/sbin/dmidecode -V
+/usr/bin/dmidecode -V
 status=$?
 if test $status -eq 0
 then
-    echo "command /usr/local/sbin/dmidecode -V passed"
+    echo "command /usr/bin/dmidecode -V passed"
 else
-    echo "command /usr/local/sbin/dmidecode -V failed"
+    echo "command /usr/bin/dmidecode -V failed"
     exit
 fi
 
 echo "dmidecode command reads the system DMI table to display hardware and BIOS information of the server"
 echo "/usr/local/sbin/dmidecode -t 4"
-/usr/local/sbin/dmidecode -t 4
+/usr/bin/dmidecode -t 4
 status=$?
 if test $status -eq 0
 then
-    echo "command /usr/local/sbin/dmidecode -t 4 passed"
+    echo "command /usr/bin/dmidecode -t 4 passed"
 else
-    echo "command /usr/local/sbin/dmidecode -t 4 failed"
+    echo "command /usr/bin/dmidecode -t 4 failed"
     exit
 fi
 exit

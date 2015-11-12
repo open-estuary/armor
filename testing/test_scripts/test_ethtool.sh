@@ -20,36 +20,36 @@ else
     exit
 fi
 
-echo "ethtool eth0 - List ethernet device's properties"
-ethtool eth0    
+echo "ethtool eth3 - List ethernet device's properties"
+ethtool eth3    
 status=$?
 if test $status -eq 0
 then
-    echo "command ethtool eth0 passed"
+    echo "command ethtool eth3 passed"
 else
-    echo "command ethtool eth0 failed"
+    echo "command ethtool eth3 failed"
     exit
 fi
 
-echo "ethtool -S eth0 - Display Network Statistics of Specific Ethernet Device"
-ethtool -S eth0
+echo "ethtool -S eth3 - Display Network Statistics of Specific Ethernet Device"
+ethtool -S eth3
 status=$?
 if test $status -eq 0
 then
-    echo "command ethtool -S eth0 passed"
+    echo "command ethtool -S eth3 passed"
 else
-    echo "command ethtool -S eth0 failed"
+    echo "command ethtool -S eth3 failed"
     exit
 fi
 
-echo "ethtool -i eth0 - Display Ethernet Driver Settings"
-ethtool -i eth0
+echo "ethtool -i eth3 - Display Ethernet Driver Settings"
+ethtool -i eth3
 status=$?
 if test $status -eq 0
 then
-    echo "command ethtool -i eth0 passed"
+    echo "command ethtool -i eth3 passed"
 else
-    echo "command ethtool -i eth0 failed"
+    echo "command ethtool -i eth3 failed"
     exit
 fi
 exit

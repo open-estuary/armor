@@ -20,7 +20,7 @@ else
 fi
 
 echo " grep - search for a string in files"
-tail /proc/misc | grep network_latency    
+tail /proc/misc | grep loop-control    
 status=$?
 if test $status -eq 0
 then

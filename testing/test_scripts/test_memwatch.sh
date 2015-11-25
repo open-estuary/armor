@@ -20,7 +20,7 @@ NEW_STR="gcc"
 sed -i -e "s/$OLD_STR/$NEW_STR/g" Makefile
 
 OLD_STR="\#error \"Hey\! Don't just compile this program, read the comments first\!\""
-NEW_STR="\/\* \#error \"Hey\! Don't just compile this program, read the comments first\!\" \*\/"
+NEW_STR=""
 sed -i -e "s/$OLD_STR/$NEW_STR/g" test.c 
 
 make 

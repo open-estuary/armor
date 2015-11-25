@@ -21,6 +21,9 @@ fi
 
 #  Testing sar
 #switch on the sysstat and enable system log collection 
+OLD_STR="false"
+NEW_STR="true"
+sed -i -e "s/$OLD_STR/$NEW_STR/g" /etc/default/sysstat
 service sysstat restart 
 #Displays CPU usage for the current day that was collected until that point.
 echo "sar -u" 

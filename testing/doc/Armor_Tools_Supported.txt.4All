@@ -13,128 +13,138 @@ Ubuntu
 3) ltrace - library call tracer.
 4) netstat   
 5) top - display Linux tasks. 
-7) pidstat - Report statistics for Linux tasks.
-8) vmstat - Report virtual memory statistics.
-9) ftrace
-10) iostat -  Report CPU statistics and input/output statistics for devices, partitions and network filesystems (NFS). 
-11) tcpdump - dump traffic on a network.
-12) ethtool - query or control network driver and hardware settings, particularly for wired Ethernet devices. 
-13) swapon, swapoff : enable/disable devices and files for paging and swapping. 
-15) gdb: gnu debugger
-16) iptables - administration tool for IPv4 packet filtering and NAT.
-17) mkfs - build a Linux file system on a device, usually a hard disk partition.
-18) mount - mount a file system. 
-19) du - estimates the file space usage.
-20) df - report file system disk space usage.
-21) dmidecode - DMI table decoder(Presently not working because of some system issue)
-22) fsck - is used to check and optionally repair a Linux file system.
-23) lscpu - display information about the CPU architecture. 
-24) lspci - List all PCI devices. 
-25) setpci - utility for querying and configuring PCI devices.  
-26) tail - this utility outputs the last part of the files. 
-27) grep - tool searches the named input files for lines contains a match to the given pattern.   
-28) awk - pattern scanning and processing language.
-29) sed - is a stream editor, used to perform basic text transformations.
-30) dstat - versatile tool for generating system resource statistics. Replacement for vmstat, iostat and ifstat.
-31) procps - procps is the package that has a bunch of small useful utilities that give information about processes using the /proc filesystem.
-32) tiptop - display hardware performance counters for Linux tasks.
-33) iotop - simple top-like I/O monitor.
-34) blktrace - generate traces of the i/o traffic on block devices.
-35) nicstat - Show Network Interface Card Statistics.
-36) lldptool - manage the LLDP settings and status of lldpad (Link Layer Discovery Protocol).
-37) oprofile - a system-wide profiler, capable of profiling all running code at low overhead.
-38) latencytop - a tool for developers to visualize system latencies.
-39) kgdb: Kernel gnu debugger.
-40) kdb: kernel debugger.
-41) systemtap - SystemTap provides free software (GPL) infrastructure to simplify the gathering of information about the running Linux system. 
-42) kprobes  
-43) crash - Analyze Linux crash dump data or a live system.
-44) memwatch - memory leak detection tool.
-45) LTTNG - Linux Trace Toolkit Next Generation.
+6) pidstat - Report statistics for Linux tasks.
+7) vmstat - Report virtual memory statistics.
+8) ftrace
+9) iostat -  Report CPU statistics and input/output statistics for devices, partitions and network filesystems (NFS). 
+10) tcpdump - dump traffic on a network.
+11) ethtool - query or control network driver and hardware settings, particularly for wired Ethernet devices. 
+12) swapon, swapoff : enable/disable devices and files for paging and swapping. 
+13) gdb: gnu debugger
+14) iptables - administration tool for IPv4 packet filtering and NAT.
+15) mkfs - build a Linux file system on a device, usually a hard disk partition.
+16) mount - mount a file system. 
+17) du - estimates the file space usage.
+18) df - report file system disk space usage.
+19) dmidecode - DMI table decoder(Presently not working because of some system issue)
+20) fsck - is used to check and optionally repair a Linux file system.
+21) lscpu - display information about the CPU architecture. 
+22) lspci - List all PCI devices. 
+23) setpci - utility for querying and configuring PCI devices.  
+24) tail - this utility outputs the last part of the files. 
+25) grep - tool searches the named input files for lines contains a match to the given pattern.   
+26) awk - pattern scanning and processing language.
+27) sed - is a stream editor, used to perform basic text transformations.
+28) dstat - versatile tool for generating system resource statistics. Replacement for vmstat, iostat and ifstat.
+29) procps - procps is the package that has a bunch of small useful utilities that give information about processes using the /proc filesystem.
+30) tiptop - display hardware performance counters for Linux tasks.
+31) iotop - simple top-like I/O monitor.
+32) blktrace - generate traces of the i/o traffic on block devices.
+33) nicstat - Show Network Interface Card Statistics.
+34) lldptool - manage the LLDP settings and status of lldpad (Link Layer Discovery Protocol).
+35) oprofile - a system-wide profiler, capable of profiling all running code at low overhead.
+36) latencytop - a tool for developers to visualize system latencies.
+37) kgdb: Kernel gnu debugger.
+38) kdb: kernel debugger.
+39) systemtap - SystemTap provides free software (GPL) infrastructure to simplify the gathering of information about the running Linux system. 
+40) kprobes  
+41) crash - Analyze Linux crash dump data or a live system.
+42) memwatch - memory leak detection tool.
+43) LTTNG - Linux Trace Toolkit Next Generation.
 
 
 Fedora
 ======
-1) strace - trace system calls and signals
-2) ltrace - library call tracer.
-3) netstat  
-4) top - display Linux tasks.
-5) pidstat - Report statistics for Linux tasks.
-6) vmstat - Report virtual memory statistics.
-7) ftrace
-8) iostat -  Report CPU statistics and input/output statistics for devices, partitions and network filesystems (NFS).
-9) tcpdump - dump traffic on a network.
-10) ethtool - query or control network driver and hardware settings, particularly for wired Ethernet devices. 
-11) swapon, swapoff : enable/disable devices and files for paging and swapping.
-12) gdb: gnu debugger
-13) iptables - administration tool for IPv4 packet filtering and NAT.
-14) mkfs - build a Linux file system on a device, usually a hard disk partition.
-15) mount - mount a file system.
-16) du - estimates the file space usage.
-17) df - report file system disk space usage.
-18) dmidecode - DMI table decoder(Presently not working because of some system issue)
-19) fsck - is used to check and optionally repair a Linux file system.
-20) lscpu - display information about the CPU architecture.
-21) lspci - List all PCI devices.
-22) setpci - utility for querying and configuring PCI devices.
-23) tail - this utility outputs the last part of the files.
-24) grep - tool searches the named input files for lines contains a match to the given pattern.
-25) awk - pattern scanning and processing language.
-26) sed - is a stream editor, used to perform basic text transformations.
-27) dstat - versatile tool for generating system resource statistics. Replacement for vmstat, iostat and ifstat.
-28) procps - procps is the package that has a bunch of small useful utilities that give information about processes using the /proc filesystem.
-29) tiptop - display hardware performance counters for Linux tasks.
-30) iotop - simple top-like I/O monitor.
-31) blktrace - generate traces of the i/o traffic on block devices.
-32) nicstat - Show Network Interface Card Statistics.
-33) lldptool - manage the LLDP settings and status of lldpad (Link Layer Discovery Protocol).
-34) oprofile - a system-wide profiler, capable of profiling all running code at low overhead.
-35) latencytop - a tool for developers to visualize system latencies.
-36) systemtap - SystemTap provides free software (GPL) infrastructure to simplify the gathering of information about the running Linux system.
-37) crash - Analyze Linux crash dump data or a live system.
-38) memwatch - memory leak detection tool.
+1) Perf integrated with LLC
+2) strace - trace system calls and signals
+3) ltrace - library call tracer.
+4) netstat  
+5) top - display Linux tasks.
+6) pidstat - Report statistics for Linux tasks.
+7) vmstat - Report virtual memory statistics.
+8) ftrace
+9) iostat -  Report CPU statistics and input/output statistics for devices, partitions and network filesystems (NFS).
+10) tcpdump - dump traffic on a network.
+11) ethtool - query or control network driver and hardware settings, particularly for wired Ethernet devices. 
+12) swapon, swapoff : enable/disable devices and files for paging and swapping.
+13) gdb: gnu debugger
+14) iptables - administration tool for IPv4 packet filtering and NAT.
+15) mkfs - build a Linux file system on a device, usually a hard disk partition.
+16) mount - mount a file system.
+17) du - estimates the file space usage.
+18) df - report file system disk space usage.
+19) dmidecode - DMI table decoder(Presently not working because of some system issue)
+20) fsck - is used to check and optionally repair a Linux file system.
+21) lscpu - display information about the CPU architecture.
+22) lspci - List all PCI devices.
+23) setpci - utility for querying and configuring PCI devices.
+24) tail - this utility outputs the last part of the files.
+25) grep - tool searches the named input files for lines contains a match to the given pattern.
+26) awk - pattern scanning and processing language.
+27) sed - is a stream editor, used to perform basic text transformations.
+28) dstat - versatile tool for generating system resource statistics. Replacement for vmstat, iostat and ifstat.
+29) procps - procps is the package that has a bunch of small useful utilities that give information about processes using the /proc filesystem.
+30) tiptop - display hardware performance counters for Linux tasks.
+31) iotop - simple top-like I/O monitor.
+32) blktrace - generate traces of the i/o traffic on block devices.
+33) nicstat - Show Network Interface Card Statistics.
+34) lldptool - manage the LLDP settings and status of lldpad (Link Layer Discovery Protocol).
+35) oprofile - a system-wide profiler, capable of profiling all running code at low overhead.
+36) latencytop - a tool for developers to visualize system latencies.
+37) kgdb: Kernel gnu debugger.
+38) kdb: kernel debugger.
+39) systemtap - SystemTap provides free software (GPL) infrastructure to simplify the gathering of information about the running Linux system.
+40) kprobes
+41) crash - Analyze Linux crash dump data or a live system.
+42) memwatch - memory leak detection tool.
+43) LTTNG - Linux Trace Toolkit Next Generation.
 
 
 OpenSuse
 ========
-1) strace - trace system calls and signals
-2) ltrace - library call tracer.
-3) netstat
-4) top - display Linux tasks.
-5) pidstat - Report statistics for Linux tasks.
-6) vmstat - Report virtual memory statistics.
-7) ftrace
-8) iostat -  Report CPU statistics and input/output statistics for devices, partitions and network filesystems (NFS).
-9) tcpdump - dump traffic on a network.
-10) ethtool - query or control network driver and hardware settings, particularly for wired Ethernet devices.
-11) swapon, swapoff : enable/disable devices and files for paging and swapping.
-12) gdb: gnu debugger
-13) iptables - administration tool for IPv4 packet filtering and NAT.
-14) mkfs - build a Linux file system on a device, usually a hard disk partition.
-15) mount - mount a file system.
-16) du - estimates the file space usage.
-17) df - report file system disk space usage.
-18) dmidecode - DMI table decoder(Presently not working because of some system issue)
-19) fsck - is used to check and optionally repair a Linux file system.
-20) lscpu - display information about the CPU architecture.
-21) lspci - List all PCI devices.
-22) setpci - utility for querying and configuring PCI devices.
-23) tail - this utility outputs the last part of the files.
-24) grep - tool searches the named input files for lines contains a match to the given pattern.
-25) awk - pattern scanning and processing language.
-26) sed - is a stream editor, used to perform basic text transformations.
-27) dstat - versatile tool for generating system resource statistics. Replacement for vmstat, iostat and ifstat.
-28) procps - procps is the package that has a bunch of small useful utilities that give information about processes using the /proc filesystem.
-29) tiptop - display hardware performance counters for Linux tasks.
-30) iotop - simple top-like I/O monitor.
-31) blktrace - generate traces of the i/o traffic on block devices.
-32) nicstat - Show Network Interface Card Statistics.
-33) lldptool - manage the LLDP settings and status of lldpad (Link Layer Discovery Protocol).
-34) oprofile - a system-wide profiler, capable of profiling all running code at low overhead.
-35) latencytop - a tool for developers to visualize system latencies.
-36) systemtap - SystemTap provides free software (GPL) infrastructure to simplify the gathering of information about the running Linux system.
-37) crash - Analyze Linux crash dump data or a live system.
-38) memwatch - memory leak detection tool.
+1) Perf integrated with LLC
+2) strace - trace system calls and signals
+3) ltrace - library call tracer.
+4) netstat
+5) top - display Linux tasks.
+6) pidstat - Report statistics for Linux tasks.
+7) vmstat - Report virtual memory statistics.
+8) ftrace
+9) iostat -  Report CPU statistics and input/output statistics for devices, partitions and network filesystems (NFS).
+10) tcpdump - dump traffic on a network.
+11) ethtool - query or control network driver and hardware settings, particularly for wired Ethernet devices.
+12) swapon, swapoff : enable/disable devices and files for paging and swapping.
+13) gdb: gnu debugger
+14) iptables - administration tool for IPv4 packet filtering and NAT.
+15) mkfs - build a Linux file system on a device, usually a hard disk partition.
+16) mount - mount a file system.
+17) du - estimates the file space usage.
+18) df - report file system disk space usage.
+19) dmidecode - DMI table decoder(Presently not working because of some system issue)
+20) fsck - is used to check and optionally repair a Linux file system.
+21) lscpu - display information about the CPU architecture.
+22) lspci - List all PCI devices.
+23) setpci - utility for querying and configuring PCI devices.
+24) tail - this utility outputs the last part of the files.
+25) grep - tool searches the named input files for lines contains a match to the given pattern.
+26) awk - pattern scanning and processing language.
+27) sed - is a stream editor, used to perform basic text transformations.
+28) dstat - versatile tool for generating system resource statistics. Replacement for vmstat, iostat and ifstat.
+29) procps - procps is the package that has a bunch of small useful utilities that give information about processes using the /proc filesystem.
+30) tiptop - display hardware performance counters for Linux tasks.
+31) iotop - simple top-like I/O monitor.
+32) blktrace - generate traces of the i/o traffic on block devices.
+33) nicstat - Show Network Interface Card Statistics.
+34) lldptool - manage the LLDP settings and status of lldpad (Link Layer Discovery Protocol).
+35) oprofile - a system-wide profiler, capable of profiling all running code at low overhead.
+36) latencytop - a tool for developers to visualize system latencies.
+37) kgdb: Kernel gnu debugger.
+38) kdb: kernel debugger.
+39) systemtap - SystemTap provides free software (GPL) infrastructure to simplify the gathering of information about the running Linux system.
+40) kprobes
+41) crash - Analyze Linux crash dump data or a live system.
+42) memwatch - memory leak detection tool.
+43) LTTNG - Linux Trace Toolkit Next Generation.
 
 
 =============================================== End  =================================================

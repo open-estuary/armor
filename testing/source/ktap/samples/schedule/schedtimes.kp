@@ -1,0 +1,131 @@
+#!/usr/vin/env ktap
+
+#schedtimer.kp
+#Initially inspired by Systemtap schedtimes.stp
+#and more bugfree compare with Systemtap's version
+#
+#Note that the time value is associate with pid, not with execname strictly,
+#sometime you will found there have sleep time for command "ls", the reason
+#is that sleep time is belong to parent process bash, so clear on this.
+
+var RUNNING = 0
+var QUEUED = 1
+var SLEEPING = 2
+var DEAD = 64
+
+var run_time = {}
+var queued_time = {}
+var sleep_time = {}
+var io_wait_time = {}
+
+var pid_state = {}
+var pid_names = {}
+var prev_timestamp = {}
+var io_wait = {}
+
+trace sched:sched_switch {
+	var prev_comm = arg0
+	var prev_pid = arg1
+	var prev_state = arg3
+	var next_comm = arg4
+	var next_pid = arg5
+	var t = gettimeofday_us()
+
+	if (pid_state[prev_pid] == nil) {
+		#do nothing
+	} elseif (pid_state[prev_pid] == RUNNING) {
+		run_time[prev_pid] += t - prev_timestamp[prev_pid]
+	} elseif (pid_state[prev_pid] == QUEUED) {
+		#found this:
+		#sched_wakeup comm=foo
+		#sched_switch prev_comm=foo
+		run_time[prev_pid] += t - prev_timestamp[prev_pid]
+	}
+
+	pid_names[prev_pid] = prev_comm
+	prev_timestamp[prev_pid] = t
+
+	if (prev_state == DEAD) {
+		pid_state[prev_pid] = DEAD
+	} elseif (prev_state > 0) {
+		if (in_iowait() == 1) {
+			io_wait[prev_pid] = 1
+		}
+		pid_state[prev_pid] = SLEEPING
+	} elseif (prev_state == 0) {
+		pid_state[prev_pid] = QUEUED
+	}
+
+	if (pid_state[next_pid] == nil) {
+		pid_state[next_pid] = RUNNING
+	} elseif (pid_state[next_pid] == QUEUED) {
+		queued_time[next_pid] += t - prev_timestamp[next_pid]
+		pid_state[next_pid] = RUNNING
+	}
+
+	pid_names[next_pid] = next_comm
+	prev_timestamp[next_pid] = t
+}
+
+trace sched:sched_wakeup, sched:sched_wakeup_new {
+	var comm = arg0
+	var wakeup_pid = arg1
+	var success = arg3
+	var t = gettimeofday_us()
+
+	if (pid_state[wakeup_pid] == nil) {
+		#do nothing
+	} elseif (pid_state[wakeup_pid] == SLEEPING) {
+		var durtion = t - prev_timestamp[wakeup_pid]
+
+		sleep_time[wakeup_pid] += durtion
+		if (io_wait[wakeup_pid] == 1) {
+			io_wait_time[wakeup_pid] += durtion
+			io_wait[wakeup_pid] = 0
+		}
+	} elseif (pid_state[wakeup_pid] == RUNNING) {
+		return
+	}
+
+	pid_names[wakeup_pid] = comm
+	prev_timestamp[wakeup_pid] = t
+	pid_state[wakeup_pid] = QUEUED
+}
+
+trace_end {
+	var t = gettimeofday_us()
+	
+	for (_pid, _state in pairs(pid_state)) {
+		var durtion = t - prev_timestamp[_pid]
+		if (_state == SLEEPING) {
+			sleep_time[_pid] += durtion
+		} elseif (_state == QUEUED) {
+			queued_time[_pid] += durtion
+		} elseif (_state == RUNNING) {
+			run_time[_pid] += durtion
+		}
+	}
+
+	printf ("%16s: %6s %10s %10s %10s %10s %10s\n\n",
+		"execname", "pid", "run(us)", "sleep(us)", "io_wait(us)",
+		"queued(us)", "total(us)")
+
+	for (_pid, _time in pairs(run_time)) {
+		if (sleep_time[_pid] == nil) {
+			sleep_time[_pid] = 0
+		}
+		if (queued_time[_pid] == nil) {
+			queued_time[_pid] = 0
+		}
+
+		if (io_wait_time[_pid] == nil) {
+			io_wait_time[_pid] = 0
+		}
+
+		printf("%16s: %6d %10d %10d %10d %10d %10d\n",
+			pid_names[_pid], _pid, run_time[_pid],
+			sleep_time[_pid], io_wait_time[_pid],
+			queued_time[_pid], run_time[_pid] + sleep_time[_pid] +
+			queued_time[_pid]);
+	}
+}

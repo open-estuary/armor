@@ -1,0 +1,61 @@
+#! /usr/bin/env ktap
+
+# Based on systemtap traceio.stp
+
+var reads = {}
+var writes = {}
+var total_io = {}
+
+trace syscalls:sys_exit_read {
+	reads[execname] += arg1
+	total_io[execname] += arg1
+}
+
+trace syscalls:sys_exit_write {
+	writes[execname] += arg1
+	total_io[execname] += arg1
+}
+
+function humanread_digit(bytes) {
+	if (bytes > 1024*1024*1024) {
+		return bytes/1024/1024/1024
+	} elseif (bytes > 1024*1024) {
+		return bytes/1024/1024
+	} elseif (bytes > 1024) {
+		return bytes/1024
+	} else {
+		return bytes
+	}
+}
+
+function humanread_x(bytes) {
+	if (bytes > 1024*1024*1024) {
+		return " GiB"
+	} elseif (bytes > 1024*1024) {
+		return " MiB"
+	} elseif (bytes > 1024) {
+		return " KiB"
+	} else {
+		return "   B"
+	}
+}
+
+tick-1s {
+	ansi.clear_screen()
+	for (exec, _ in pairs(total_io)) {
+		var readnum = reads[exec]
+		var writenum = writes[exec]
+
+		if (readnum == nil) {
+			readnum = 0
+		}
+		if (writenum == nil) {
+			writenum = 0
+		}
+		printf("%15s r: %12d%s w: %12d%s\n", exec,
+			humanread_digit(readnum), humanread_x(readnum),
+			humanread_digit(writenum), humanread_x(writenum))
+	}
+	printf("\n")
+}
+

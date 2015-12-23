@@ -51,6 +51,11 @@ Ubuntu
 41) crash - Analyze Linux crash dump data or a live system.
 42) memwatch - memory leak detection tool.
 43) LTTNG - Linux Trace Toolkit Next Generation.
+44) powertop - program help to analyse the power consumption.
+45) slabtop - display kernel slab cache information.
+46) ktap - script based dynamic tracing tool for Linux.
+47) gprof - performance analysis tool.
+48) valgrind - instrumentation framework for buiding dynamic analysis tools, which can detect memory management and threading bugs,does profiling etc. 
 
 
 Fedora
@@ -98,6 +103,11 @@ Fedora
 41) crash - Analyze Linux crash dump data or a live system.
 42) memwatch - memory leak detection tool.
 43) LTTNG - Linux Trace Toolkit Next Generation.
+44) powertop - program help to analyse the power consumption.
+45) slabtop - display kernel slab cache information.
+46) ktap - script based dynamic tracing tool for Linux.
+47) gprof - performance analysis tool.
+48) valgrind - instrumentation framework for buiding dynamic analysis tools, which can detect memory management and threading bugs,does profiling etc.
 
 
 OpenSuse
@@ -145,6 +155,12 @@ OpenSuse
 41) crash - Analyze Linux crash dump data or a live system.
 42) memwatch - memory leak detection tool.
 43) LTTNG - Linux Trace Toolkit Next Generation.
+44) powertop - program help to analyse the power consumption.
+45) slabtop - display kernel slab cache information.
+46) ktap - script based dynamic tracing tool for Linux.
+47) gprof - performance analysis tool.
+48) valgrind - instrumentation framework for buiding dynamic analysis tools, which can detect memory management and threading bugs,does profiling etc.
+
 
 
 =============================================== End  =================================================

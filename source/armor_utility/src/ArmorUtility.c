@@ -74,7 +74,7 @@ int display_tools_info()
    printf("****************************************************************************************\n");
    printf("*                              Armor Utility %2.1f                                       *\n",ARMOR_UTIL_VER);   
    printf("*                                                                                      *\n");
-   printf("*                              Armor Tools Information                                *\n");   
+   printf("*                              Armor Tools Information                                 *\n");   
    printf("****************************************************************************************\n");
    printf("Armor Tool's Manual:\n"); 
    printf("https://github.com/open-estuary/estuary/blob/master/doc/Armor_Manual.txt.4All\n");

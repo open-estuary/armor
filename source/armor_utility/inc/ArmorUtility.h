@@ -22,8 +22,7 @@
 #define ARMOR_UTIL_VER   0.1  /* version */
 
 /* info file for supported tools */
-//#define ARMOR_TOOLS_INFO_FILE    "/home/shiju/Documents/Projects/Armor_Tools/openestuary/armor_utility/cfg/armor_pkg_info_debian.cfg"  
-#define ARMOR_TOOLS_INFO_FILE    "/usr/local/armor/config/armor_pkg_info_debian.cfg"  
+#define ARMOR_TOOLS_INFO_FILE    "/usr/local/armor/config/armor_pkg_info.cfg"  
 
 #define UTIL_MODULE_NAME_SIZE   512 
 #define UTIL_INFO_FILE_NAME_SIZE 1024 

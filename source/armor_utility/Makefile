@@ -40,12 +40,12 @@ BIN_DIR = bin
 LIB_DIRS =
 LIB_OPTS =
 
-LIB_NAMES = 
+LIB_NAMES =
 
 LINK_LIBS = $(addprefix -l,$(LIB_NAMES))
 
 # Client target and objects
-EXECUTABLE_NAME = ArmorUtility
+EXECUTABLE_NAME = armor_utility
 EXECUTABLE_TGT = $(BIN_DIR)/$(EXECUTABLE_NAME)$(EXE)
 
 EXECUTABLE_OBJ_NAMES = ArmorUtility
@@ -55,14 +55,19 @@ EXECUTABLE_OBJS = $(addprefix $(OBJ_DIR)/,$(addsuffix .$(OBJ),$(EXECUTABLE_OBJ_N
 OBJS = $(EXECUTABLE_OBJS)
 
 # Targets
-all: $(EXECUTABLE_TGT)   
+all: $(EXECUTABLE_TGT)
 
 $(OBJ_DIR)/%.$(OBJ): $(SRC_DIR)/%.$(C)
 	$(C_COMPILER) -c $(C_FLAGS) $< -o $@
 
-$(EXECUTABLE_TGT): $(OBJS) $(LIB_DEPS)
-	if [ ! -e $(BIN_DIR) ]; then mkdir $(BIN_DIR); fi
+$(EXECUTABLE_TGT): directories $(OBJS) $(LIB_DEPS)
 	$(LINK) $@ $(LINK_OPTS) $(LIB_OPTS) $(OBJS) $(LIB_DEPS) $(LINK_LIBS) $(LDADD)
+
+directories:
+	if [ ! -d $(BIN_DIR) ]; then mkdir $(BIN_DIR); fi
+	if [ ! -d $(OBJ_DIR) ]; then mkdir $(OBJ_DIR); fi
 
 clean:
 	-rm -rf $(OBJS) $(EXECUTABLE_TGT)
+
+

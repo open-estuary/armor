@@ -286,7 +286,7 @@ int search_and_display_tool_info()
    printf("*                              Armor Tool's Information                                *\n");   
    printf("****************************************************************************************\n");
 
-   system("rm log");
+   /* system("rm log"); */
    while (fgets (p_utils_info->input_line, INFO_INPUT_LINE_SIZE, config_file) != NULL )  
    {
        if((is_tool_found == true) && (is_done == true))

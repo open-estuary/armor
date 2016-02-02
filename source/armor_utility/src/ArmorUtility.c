@@ -49,8 +49,10 @@ void del_newline(char *s)
 int display_tools_info()
 {
    FILE* config_file = NULL;
+   FILE* log_file = NULL;
    char *ptr = NULL;    
    int i;
+   int result;
     
    DBG_PRINT("+display_tools_info\n");
   
@@ -95,7 +97,9 @@ int display_tools_info()
    memset(&p_utils_info->tool_ver, 0, TOOL_VER_SIZE);    
    memset(&p_utils_info->tool_type, 0, TOOL_TYPE_SIZE);     
    memset(&p_utils_info->tool_doc, 0, TOOL_DOC_LINK_SIZE);
+   memset(&p_utils_info->sys_cmd, 0, TOOL_VER_CHECK_CMD_SIZE);
 
+   /* system("rm log"); */
    while (fgets (p_utils_info->input_line, INFO_INPUT_LINE_SIZE, config_file) != NULL )  
    {
        i = 0;
@@ -116,9 +120,9 @@ int display_tools_info()
        } 
               
        /* read tool's version */
-       if((ptr = strstr(p_utils_info->input_line,"Version:")) != NULL)
+       if((ptr = strstr(p_utils_info->input_line,"Tested Version:")) != NULL)
        {
-          ptr = ptr + strlen("Version:");
+          ptr = ptr + strlen("Tested Version:");
           strcpy(p_utils_info->tool_ver, ptr);    
        } 
 
@@ -127,6 +131,14 @@ int display_tools_info()
        {
           ptr = ptr + strlen("Type:");
           strcpy(p_utils_info->tool_type, ptr);    
+       }
+
+       /* read tool's version check command */
+       if((ptr = strstr(p_utils_info->input_line,"Version Check Command")) != NULL)
+       {
+           ptr = ptr + strlen("Version Check Command:");
+           strcpy(p_utils_info->sys_cmd, ptr);
+           strcat(p_utils_info->sys_cmd, " > log");
        }
 
        /* read tool's document info if any */
@@ -153,15 +165,40 @@ int display_tools_info()
        {
            /* print tool's info */
            printf("\n======================================================\n");
-           printf("[Tool:%s][Version:%s][Type:%s]\n", p_utils_info->tool_name,
+           printf("[Tool:%s][Tested Version:%s][Type:%s]\n", p_utils_info->tool_name,
                    p_utils_info->tool_ver, p_utils_info->tool_type);
+
+           /* Get the tool's version info on the target */
+           if((strcmp(p_utils_info->sys_cmd, "\0")) != 0)
+           {
+               result = system(p_utils_info->sys_cmd);
+               if (result == -1)
+               {
+                   printf("Installed on the target:NO\n");
+               }  
+           }
+           log_file = fopen("log" ,"r");
+           if(log_file != NULL)
+           {
+               if(fgets (p_utils_info->tool_ver, TOOL_VER_SIZE, log_file) != NULL)
+               {
+                   del_newline(p_utils_info->tool_ver);
+                   printf("Installed on the target:YES\n");
+                   printf("Version on the target:");
+                   printf("%s\n", p_utils_info->tool_ver);
+               } else
+               {
+                   printf("Installed on the target:NO\n");
+               }
+               fclose(log_file);
+               system("rm log");
+           } 
 
            if((strcmp(p_utils_info->tool_doc, "\0")) != 0)
            {
                printf("Documents:\n");
                printf("%s\n", p_utils_info->tool_doc);
            }
- 
            printf("%s\n", ptr);
 
            /* read and print installation commands */
@@ -183,6 +220,7 @@ int display_tools_info()
                    memset(&p_utils_info->tool_ver, 0, TOOL_VER_SIZE);    
                    memset(&p_utils_info->tool_type, 0, TOOL_TYPE_SIZE);
                    memset(&p_utils_info->tool_doc, 0, TOOL_DOC_LINK_SIZE);
+                   memset(&p_utils_info->sys_cmd, 0, TOOL_VER_CHECK_CMD_SIZE);
                    printf("======================================================");
                    break;
                }
@@ -217,11 +255,13 @@ int display_tools_info()
 int search_and_display_tool_info()
 {
    FILE* config_file = NULL;
+   FILE* log_file = NULL;
    char *ptr = NULL;    
    int i;
    int is_done = false;
    int is_tool_found = false;
-    
+   int result;
+ 
    DBG_PRINT("+search_and_display_tool_info\n");
   
    if(strcmp(p_utils_info->module_name, "armor") == 0)
@@ -246,6 +286,7 @@ int search_and_display_tool_info()
    printf("*                              Armor Tool's Information                                *\n");   
    printf("****************************************************************************************\n");
 
+   system("rm log");
    while (fgets (p_utils_info->input_line, INFO_INPUT_LINE_SIZE, config_file) != NULL )  
    {
        if((is_tool_found == true) && (is_done == true))
@@ -277,17 +318,24 @@ int search_and_display_tool_info()
        if(is_tool_found == true)
        {       
            /* read tool's version */
-           if((ptr = strstr(p_utils_info->input_line,"Version:")) != NULL)
+           if((ptr = strstr(p_utils_info->input_line,"Tested Version:")) != NULL)
            {
-               ptr = ptr + strlen("Version:");
+               ptr = ptr + strlen("Tested Version:");
                strcpy(p_utils_info->tool_ver, ptr);    
-           } 
-
+           }
            /* read tool's type(standard/custom) */
            if((ptr = strstr(p_utils_info->input_line,"Type:")) != NULL)
            {
                ptr = ptr + strlen("Type:");
                strcpy(p_utils_info->tool_type, ptr);    
+           }
+
+           /* read tool's version check command */
+           if((ptr = strstr(p_utils_info->input_line,"Version Check Command")) != NULL)
+           {
+               ptr = ptr + strlen("Version Check Command:");
+               strcpy(p_utils_info->sys_cmd, ptr);    
+               strcat(p_utils_info->sys_cmd, " > log");
            }
 
            /* read tool's document info if any */
@@ -308,14 +356,42 @@ int search_and_display_tool_info()
                    strcpy(p_utils_info->tool_doc, p_utils_info->input_line);
                }
            }
-
            /* read tool's installation commands */
            if((ptr = strstr(p_utils_info->input_line,"Installation Commands:")) != NULL)
            {
+                /* find tool's version on the target */
+                //sprintf(sys_cmd, "%s --version \n", p_utils_info->tool_name);
                 /* print tool's info */
                 printf("===========================================\n");
-                printf("[Tool:%s][Version:%s][Type:%s]\n", p_utils_info->tool_name,
+                printf("[Tool:%s][Tested Version:%s][Type:%s]\n", p_utils_info->tool_name,
                         p_utils_info->tool_ver, p_utils_info->tool_type);
+                
+                /* Get the tool's version info on the target */
+                if((strcmp(p_utils_info->sys_cmd, "\0")) != 0)
+                {
+                    result = system(p_utils_info->sys_cmd);
+                    if (result == -1)
+                    {
+                        printf("Installed on the target:NO\n");
+                    }
+                }
+                log_file = fopen("log" ,"r");  
+                if(log_file != NULL)
+                {                    
+                    if(fgets (p_utils_info->tool_ver, TOOL_VER_SIZE, log_file) != NULL)
+                    {
+                        del_newline(p_utils_info->tool_ver);
+                        printf("Installed on the target:YES\n");
+                        printf("Version on the target:");
+                        printf("%s\n", p_utils_info->tool_ver);     
+                    } else
+                    {
+                        printf("Installed on the target:NO\n");
+                    }
+                    fclose(log_file); 
+                    system("rm log");
+                } 
+
                 if((strcmp(p_utils_info->tool_doc, "\0")) != 0)
                 {
                     printf("Documents:\n");

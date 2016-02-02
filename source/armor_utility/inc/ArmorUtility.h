@@ -31,6 +31,7 @@
 #define TOOL_VER_SIZE   256 
 #define TOOL_TYPE_SIZE  256 
 #define TOOL_DOC_LINK_SIZE  1024
+#define TOOL_VER_CHECK_CMD_SIZE  512
 
 #define SUCCESS  0
 #define FAIL -1
@@ -50,6 +51,7 @@ struct Utils_Info_Struct
     char tool_ver[TOOL_VER_SIZE]; /* store tool's version */
     char tool_type[TOOL_TYPE_SIZE]; /* store tool's type: Standard/Custom */
     char tool_doc[TOOL_DOC_LINK_SIZE]; /* store tool's document link */
+    char sys_cmd[TOOL_VER_CHECK_CMD_SIZE]; /* store system command */
     /* add here more */
 };
 

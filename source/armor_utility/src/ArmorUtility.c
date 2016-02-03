@@ -53,7 +53,9 @@ int display_tools_info()
    char *ptr = NULL;    
    int i;
    int result;
-    
+   char tmp_buf[256];   
+   int is_tool_installed = false;
+
    DBG_PRINT("+display_tools_info\n");
   
    if(strcmp(p_utils_info->module_name, "armor") == 0)
@@ -167,7 +169,31 @@ int display_tools_info()
            printf("\n======================================================\n");
            printf("[Tool:%s][Tested Version:%s][Type:%s]\n", p_utils_info->tool_name,
                    p_utils_info->tool_ver, p_utils_info->tool_type);
-
+           /* check the tool is present in the rootfs */
+           is_tool_installed = false;
+           sprintf(tmp_buf, "type -P %s > log", p_utils_info->tool_name);
+           result = system(tmp_buf);
+           if (result == -1)
+           {
+               printf("Installed on the target:NO\n");
+           } else 
+           {
+               log_file = fopen("log" ,"r");
+               if(log_file != NULL)
+               {
+                   if(fgets (tmp_buf, 256, log_file) != NULL)
+                   {
+                       del_newline(tmp_buf);
+                       if(strstr(tmp_buf, p_utils_info->tool_name) != NULL)
+                       {
+                           is_tool_installed = true;
+                       }
+                   }
+                   fclose(log_file);
+                   system("rm log");
+               } 
+           }
+   
            /* Get the tool's version info on the target */
            if((strcmp(p_utils_info->sys_cmd, "\0")) != 0)
            {
@@ -175,23 +201,26 @@ int display_tools_info()
                if (result == -1)
                {
                    printf("Installed on the target:NO\n");
-               }  
-           }
-           log_file = fopen("log" ,"r");
-           if(log_file != NULL)
-           {
-               if(fgets (p_utils_info->tool_ver, TOOL_VER_SIZE, log_file) != NULL)
-               {
-                   del_newline(p_utils_info->tool_ver);
-                   printf("Installed on the target:YES\n");
-                   printf("Version on the target:");
-                   printf("%s\n", p_utils_info->tool_ver);
-               } else
-               {
-                   printf("Installed on the target:NO\n");
                }
-               fclose(log_file);
-               system("rm log");
+               log_file = fopen("log" ,"r");
+               if(log_file != NULL)
+               {
+                   if(fgets (p_utils_info->tool_ver, TOOL_VER_SIZE, log_file) != NULL)
+                   {
+                       del_newline(p_utils_info->tool_ver);
+                       printf("Installed on the target:YES\n");
+                       printf("Version on the target:");
+                       printf("%s\n", p_utils_info->tool_ver);
+                   } else
+                   {
+                       if(is_tool_installed == true)
+                           printf("Installed on the target:YES\n");
+                       else
+                           printf("Installed on the target:NO\n");
+                   }
+                   fclose(log_file);
+                   system("rm log");
+               }
            } 
 
            if((strcmp(p_utils_info->tool_doc, "\0")) != 0)
@@ -261,6 +290,9 @@ int search_and_display_tool_info()
    int is_done = false;
    int is_tool_found = false;
    int result;
+
+   char tmp_buf[256];
+   int is_tool_installed = false;
  
    DBG_PRINT("+search_and_display_tool_info\n");
   
@@ -365,7 +397,32 @@ int search_and_display_tool_info()
                 printf("===========================================\n");
                 printf("[Tool:%s][Tested Version:%s][Type:%s]\n", p_utils_info->tool_name,
                         p_utils_info->tool_ver, p_utils_info->tool_type);
-                
+               
+                /* check the tool is present in the rootfs */
+                is_tool_installed = false;
+                sprintf(tmp_buf, "type -P %s > log", p_utils_info->tool_name);
+                result = system(tmp_buf);
+                if (result == -1)
+                {
+                    printf("Installed on the target:NO\n");
+                } else
+                {
+                    log_file = fopen("log" ,"r");
+                    if(log_file != NULL)
+                    {
+                        if(fgets (tmp_buf, 256, log_file) != NULL)
+                        {
+                            del_newline(tmp_buf);
+                            if(strstr(tmp_buf, p_utils_info->tool_name) != NULL)
+                            {
+                                is_tool_installed = true;
+                            }
+                        }
+                        fclose(log_file);
+                        system("rm log");
+                    } 
+                }
+
                 /* Get the tool's version info on the target */
                 if((strcmp(p_utils_info->sys_cmd, "\0")) != 0)
                 {
@@ -374,22 +431,25 @@ int search_and_display_tool_info()
                     {
                         printf("Installed on the target:NO\n");
                     }
-                }
-                log_file = fopen("log" ,"r");  
-                if(log_file != NULL)
-                {                    
-                    if(fgets (p_utils_info->tool_ver, TOOL_VER_SIZE, log_file) != NULL)
+                    log_file = fopen("log" ,"r");
+                    if(log_file != NULL)
                     {
-                        del_newline(p_utils_info->tool_ver);
-                        printf("Installed on the target:YES\n");
-                        printf("Version on the target:");
-                        printf("%s\n", p_utils_info->tool_ver);     
-                    } else
-                    {
-                        printf("Installed on the target:NO\n");
-                    }
-                    fclose(log_file); 
-                    system("rm log");
+                        if(fgets (p_utils_info->tool_ver, TOOL_VER_SIZE, log_file) != NULL)
+                        {
+                            del_newline(p_utils_info->tool_ver);
+                            printf("Installed on the target:YES\n");
+                            printf("Version on the target:");
+                            printf("%s\n", p_utils_info->tool_ver);
+                        } else
+                        {
+                            if(is_tool_installed == true)
+                                printf("Installed on the target:YES\n");
+                            else
+                                 printf("Installed on the target:NO\n");
+                        }
+                        fclose(log_file);
+                        system("rm log");
+                     }
                 } 
 
                 if((strcmp(p_utils_info->tool_doc, "\0")) != 0)

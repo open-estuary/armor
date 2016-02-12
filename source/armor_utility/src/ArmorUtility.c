@@ -265,7 +265,15 @@ int display_tools_info()
           ((ptr = strstr(p_utils_info->input_line,"Supported Architectures:")) != NULL))   
        {
            printf("%s\n", p_utils_info->input_line);  
-       }  
+       } 
+
+       if(((ptr = strstr(p_utils_info->input_line,"Update Command:")) != NULL))  
+       {
+           ptr = ptr + strlen("Update Command:");
+           printf("\n", ptr);
+           printf("Warning!!! must run the command \"%s\" once before try install or run any Armor tool!!!\n", ptr);
+           printf("\n", ptr);
+       }
    } /* while */
    fclose(config_file); 
    printf("\n************************* End of Armor Tool's Information **************************\n");

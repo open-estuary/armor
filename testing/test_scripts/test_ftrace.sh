@@ -13,7 +13,7 @@
 echo "Ftrace test- reading function trace"
 echo function > /sys/kernel/debug/tracing/current_tracer
 cat /sys/kernel/debug/tracing/current_tracer 
-cat /sys/kernel/debug/tracing/trace
+#cat /sys/kernel/debug/tracing/trace
 status=$?
 if test $status -eq 0
 then
@@ -34,6 +34,16 @@ else
     echo "Ftrace - reading stacktrace failed"
     exit
 fi
+
+echo "Ftrace test- standard tests for ftrace"
+./ftrace/ftracetest
+status=$?
+if test $status -ne 0
+then
+    echo "Ftrace - ftracetest failed"
+    exit
+fi
+
 exit
 
 

@@ -13,9 +13,9 @@ vmstat -V
 status=$?
 if test $status -eq 0
 then
-    echo "command vmstat -V passed"
+    echo "command vmstat -V [PASS]"
 else
-    echo "command vmstat -V failed"
+    echo "command vmstat -V [FAIL]"
     exit
 fi
 
@@ -24,9 +24,9 @@ vmstat 1 5
 status=$?
 if test $status -eq 0
 then
-    echo "command vmstat 1 5 passed"
+    echo "command vmstat 1 5 [PASS]"
 else
-    echo "command vmstat 1 5 failed"
+    echo "command vmstat 1 5 [FAIL]"
 exit
 fi
 

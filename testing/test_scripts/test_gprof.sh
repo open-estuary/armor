@@ -13,9 +13,9 @@ gprof --version
 status=$?
 if test $status -eq 0
 then
-    echo "command gprof --version passed"
+    echo "command gprof --version [PASS]"
 else
-    echo "command gprof --version failed"
+    echo "command gprof --version [FAIL]"
     exit
 fi
 
@@ -26,9 +26,9 @@ echo "./gprof_test"
 status=$?
 if test $status -eq 0
 then
-    echo "command ./gprof_test  passed"
+    echo "command ./gprof_test [PASS]"
 else
-    echo "command ./gprof_test failed"
+    echo "command ./gprof_test [FAIL]"
     exit
 fi
 
@@ -37,9 +37,9 @@ gprof gprof_test gmon.out > analysis.txt
 status=$?
 if test $status -eq 0
 then
-    echo "command gprof gprof_test gmon.out > analysis.txt  passed"
+    echo "command gprof gprof_test gmon.out > analysis.txt [PASS]"
 else
-    echo "command gprof gprof_test gmon.out > analysis.txt failed"
+    echo "command gprof gprof_test gmon.out > analysis.txt [FAIL]"
     exit
 fi
 

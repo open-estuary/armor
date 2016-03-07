@@ -13,9 +13,9 @@ tail --version
 status=$?
 if test $status -eq 0
 then
-    echo "command tail --version passed"
+    echo "command tail --version [PASS]"
 else
-    echo "command tail --version failed"
+    echo "command tail --version [FAIL]"
     exit
 fi
 
@@ -24,9 +24,9 @@ tail /proc/misc
 status=$?
 if test $status -eq 0
 then
-    echo "command tail /proc/misc passed"
+    echo "command tail /proc/misc [PASS]"
 else
-    echo "command tail /proc/misc failed"
+    echo "command tail /proc/misc [FAIL]"
     exit
 fi
 exit

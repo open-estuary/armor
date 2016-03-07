@@ -14,9 +14,9 @@ mount -V
 status=$?
 if test $status -eq 0
 then
-    echo "command mount -V passed"
+    echo "command mount -V [PASS]"
 else
-    echo "command mount -V failed"
+    echo "command mount -V [FAIL]"
     exit
 fi
     
@@ -25,9 +25,9 @@ mount
 status=$?
 if test $status -eq 0
 then
-    echo "command mount passed"
+    echo "command mount [PASS]"
 else
-    echo "command mount failed"
+    echo "command mount [FAIL]"
     exit
 fi
 #mount -t iso9660 -o ro /dev/cdrom /mnt/

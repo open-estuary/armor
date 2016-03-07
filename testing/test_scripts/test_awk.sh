@@ -13,9 +13,9 @@ awk -W version
 status=$?
 if test $status -eq 0
 then
-    echo "command awk -W version passed"
+    echo "command awk -W version [PASS]"
 else
-    echo "command awk -W version failed"
+    echo "command awk -W version [FAIL]"
 exit
 fi
 
@@ -24,9 +24,9 @@ awk '{print}' /proc/misc
 status=$?
 if test $status -eq 0
 then
-    echo "command awk '{print}' /proc/misc passed"
+    echo "command awk '{print}' /proc/misc [PASS]"
 else
-    echo "command awk '{print}' /proc/misc failed"
+    echo "command awk '{print}' /proc/misc [FAIL]"
     exit
 fi
 exit

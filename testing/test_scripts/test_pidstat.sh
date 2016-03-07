@@ -14,9 +14,9 @@ pidstat -V
 status=$?
 if test $status -eq 0
 then
-    echo "command pidstat -V passed"
+    echo "command pidstat -V [PASS]"
 else
-    echo "command pidstat -V failed"
+    echo "command pidstat -V [FAIL]"
     exit
 fi
 
@@ -25,9 +25,9 @@ pidstat -p ALL 3 2
 status=$?
 if test $status -eq 0
 then
-    echo "command pidstat -p ALL 3 2 passed"
+    echo "command pidstat -p ALL 3 2 [PASS]"
 else
-    echo "command pidstat -p ALL 3 2 failed"
+    echo "command pidstat -p ALL 3 2 [FAIL]"
     exit
 fi
 exit

@@ -13,9 +13,9 @@ sysdig --version
 status=$?
 if test $status -eq 0
 then
-    echo "command sysdig --version passed"
+    echo "command sysdig --version [PASS]"
 else
-    echo "command sysdig --version failed"
+    echo "command sysdig --version [PASS]"
     exit
 fi
 
@@ -24,9 +24,9 @@ sysdig -n 40
 status=$?
 if test $status -eq 0
 then
-    echo "command sysdig -n 40 passed"
+    echo "command sysdig -n 40 [PASS]"
 else
-    echo "command sysdig -n 40 failed"
+    echo "command sysdig -n 40 [FAIL]"
     exit
 fi
 exit

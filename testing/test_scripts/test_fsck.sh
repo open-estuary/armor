@@ -14,9 +14,9 @@ fsck -n /dev/sda7
 status=$?
 if test $status -eq 0
 then
-    echo "command fsck -n /dev/sda7 passed"
+    echo "command fsck -n /dev/sda7 [PASS]"
 else
-    echo "command fsck -n /dev/sda7 failed"
+    echo "command fsck -n /dev/sda7 [FAIL]"
     exit
 fi
 exit

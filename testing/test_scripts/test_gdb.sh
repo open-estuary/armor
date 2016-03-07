@@ -14,9 +14,9 @@ gdb -v
 status=$? 
 if test $status -eq 0
 then
-    echo "command gdb -v passed"
+    echo "command gdb -v [PASS]"
 else
-    echo "command gdb -v failed"
+    echo "command gdb -v [FAIL]"
     exit
 fi
 
@@ -26,9 +26,9 @@ gdb ./gdb_test
 status=$?
 if test $status -eq 0
 then
-    echo "command gdb ./gdb_test passed"
+    echo "command gdb ./gdb_test [PASS]"
 else
-    echo "command gdb ./gdb_test failed"
+    echo "command gdb ./gdb_test [FAIL]"
     exit
 fi
 exit

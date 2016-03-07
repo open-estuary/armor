@@ -13,9 +13,9 @@ slabtop --version
 status=$?
 if test $status -eq 0
 then
-    echo "command slabtop --version passed"
+    echo "command slabtop --version [PASS]"
 else
-    echo "command slabtop --version failed"
+    echo "command slabtop --version [FAIL]"
     exit
 fi
 
@@ -24,9 +24,9 @@ slabtop -o
 status=$?
 if test $status -eq 0
 then
-    echo "command slabtop -o passed"
+    echo "command slabtop -o [PASS]"
 else
-    echo "command slabtop -o failed"
+    echo "command slabtop -o [FAIL]"
     exit
 fi
 exit

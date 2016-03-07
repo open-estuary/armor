@@ -15,9 +15,9 @@ latencytop
 status=$?
 if test $status -eq 0
 then
-   echo "Command latencytop passed"
+   echo "Command latencytop [PASS]"
 else
-   echo "Command latencytop failed"
+   echo "Command latencytop [FAIL]"
    exit
 fi
 exit

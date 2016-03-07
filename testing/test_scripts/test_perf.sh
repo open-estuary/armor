@@ -35,9 +35,9 @@ ${PERF_BIN} list | grep -i "hardware cache event"
 status=$?
 if test $status -eq 0
 then
-    echo "command perf list passed"
+    echo "command perf list [PASS]"
 else
-    echo "command perf list failed"
+    echo "command perf list [FAIL]"
     exit -1
 fi
 
@@ -45,9 +45,9 @@ ${PERF_BIN} stat -e r300 ls -l >/dev/null
 status=$?
 if test $status -eq 0
 then
-    echo "command perf stat for LLC event passed"
+    echo "command perf stat for LLC event [PASS]"
 else
-    echo "command perf stat for LLC event failed"
+    echo "command perf stat for LLC event [FAIL]"
     exit -1
 fi
 

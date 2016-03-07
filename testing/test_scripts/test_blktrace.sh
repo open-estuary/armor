@@ -13,9 +13,9 @@ blktrace -v
 status=$?
 if test $status -eq 0
 then
-   echo "Command blktrace  -v passed"
+   echo "Command blktrace  -v [PASS]"
 else
-   echo "Command blktrace -v failed"
+   echo "Command blktrace -v [FAIL]"
    exit
 fi
 
@@ -24,9 +24,9 @@ blktrace -d /dev/sda -w 3
 status=$?
 if test $status -eq 0
 then
-   echo "Command blktrace -d /dev/sda -w 3 passed"
+   echo "Command blktrace -d /dev/sda -w 3 [PASS]"
 else
-   echo "Command blktrace -d /dev/sda -w 3 failed"
+   echo "Command blktrace -d /dev/sda -w 3 [FAIL]"
    exit
 fi
 exit

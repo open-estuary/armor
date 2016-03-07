@@ -14,9 +14,9 @@ swapon -V
 status=$?
 if test $status -eq 0
 then
-    echo "command swapon -V passed"
+    echo "command swapon -V [PASS]"
 else
-    echo "command swapon -V failed"
+    echo "command swapon -V [FAIL]"
     exit
 fi
 
@@ -24,9 +24,9 @@ swapoff -V
 status=$?
 if test $status -eq 0
 then
-    echo "command swapoff -V passed"
+    echo "command swapoff -V [PASS]"
 else
-    echo "command swapoff -V failed"
+    echo "command swapoff -V [FAIL]"
     exit
 fi
 
@@ -35,9 +35,9 @@ swapon -s
 status=$?
 if test $status -eq 0
 then
-    echo "command swapon -s passed"
+    echo "command swapon -s [PASS]"
 else
-    echo "command swapon -s failed"
+    echo "command swapon -s [FAIL]"
     exit
 fi
 
@@ -46,9 +46,9 @@ swapoff -a
 status=$?
 if test $status -eq 0
 then
-    echo "command swapoff -a passed"
+    echo "command swapoff -a [PASS]"
 else
-    echo "command swapoff -a failed"
+    echo "command swapoff -a [FAIL]"
 exit
 fi
 

@@ -14,9 +14,9 @@ iostat -V
 status=$?
 if test $status -eq 0
 then
-    echo "command iostat -V passed"
+    echo "command iostat -V [PASS]"
 else
-    echo "command iostat -V failed"
+    echo "command iostat -V [FAIL]"
     exit
 fi
 
@@ -25,22 +25,22 @@ iostat
 status=$?
 if test $status -eq 0
 then
-    echo "command iostat passed"
+    echo "command iostat [PASS]"
 else
-    echo "command iostat failed"
+    echo "command iostat [FAIL]"
 exit
 fi
 
 echo "Display disk I/O statistics"
-iostat -d
+iostat -d 2 6
 status=$?
 if test $status -eq 0
 then
-    echo "command iostat -d passed"
+    echo "command iostat -d 2 6 [PASS]"
 else
-    echo "command iostat -d failed"
+    echo "command iostat -d 2 6 [FAIL]"
     exit
 fi
 exit
-    
-
+     
+ 

@@ -13,9 +13,9 @@ dstat -v
 status=$?
 if test $status -eq 0
 then
-   echo "Command dstat  -v passed"
+   echo "Command dstat  -v [PASS]"
 else
-   echo "Command dstat -v failed"
+   echo "Command dstat -v [FAIL]"
    exit
 fi
 
@@ -24,9 +24,9 @@ dstat -all 1 4
 status=$?
 if test $status -eq 0
 then
-   echo "Command dstat -all 1 4 passed"
+   echo "Command dstat -all 1 4 [PASS]"
 else
-   echo "Command dstat -all 1 4 failed"
+   echo "Command dstat -all 1 4 [FAIL]"
    exit
 fi
 exit

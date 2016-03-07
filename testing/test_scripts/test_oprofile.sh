@@ -13,9 +13,9 @@ operf -v
 status=$?
 if test $status -eq 0
 then
-   echo "Command operf -v passed"
+   echo "Command operf -v [PASS]"
 else
-   echo "Command operf -v failed"
+   echo "Command operf -v [FAIL]"
    exit
 fi
 
@@ -24,9 +24,9 @@ operf ./test_app
 status=$?
 if test $status -eq 0
 then
-   echo "Command  operf passed"
+   echo "Command  operf [PASS]"
 else
-   echo "Command operf failed"
+   echo "Command operf [FAIL]"
    exit
 fi
 
@@ -35,9 +35,9 @@ opreport
 status=$?
 if test $status -eq 0
 then
-   echo "Command opreport passed"
+   echo "Command opreport [PASS]"
 else
-   echo "Command opreport failed"
+   echo "Command opreport [FAIL]"
    exit
 fi
 

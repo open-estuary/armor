@@ -13,9 +13,9 @@ powertop --version
 status=$?
 if test $status -eq 0
 then
-    echo "command powertop --version passed"
+    echo "command powertop --version [PASS]"
 else
-    echo "command powertop --version failed"
+    echo "command powertop --version [FAIL]"
     exit
 fi
 
@@ -24,9 +24,9 @@ powertop
 status=$?
 if test $status -eq 0
 then
-    echo "command powertop passed"
+    echo "command powertop [PASS]"
 else
-    echo "command powertop failed"
+    echo "command powertop [FAIL]"
     exit
 fi
 exit

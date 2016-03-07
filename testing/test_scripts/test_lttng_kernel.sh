@@ -20,7 +20,7 @@ lttng create lttng_kernel_test
 status=$?
 if test $status -ne 0
 then
-    echo "command lttng create failed"
+    echo "command lttng create [FAIL]"
     exit
 fi
 
@@ -29,7 +29,7 @@ lttng enable-event --kernel sched_switch,sched_process_fork
 status=$?
 if test $status -ne 0
 then
-    echo "command lttng enable-event failed"
+    echo "command lttng enable-event [FAIL]"
     exit 
 fi
 
@@ -37,7 +37,7 @@ lttng start
 status=$?
 if test $status -ne 0
 then
-    echo "command lttng start failed"
+    echo "command lttng start [FAIL]"
     exit
 fi
 
@@ -48,7 +48,7 @@ lttng stop
 status=$?
 if test $status -ne 0
 then
-    echo "command lttng stop failed"
+    echo "command lttng stop [FAIL]"
     exit
 fi
 
@@ -57,7 +57,7 @@ lttng view
 status=$?
 if test $status -ne 0
 then
-    echo "command lttng view failed"
+    echo "command lttng view [FAIL]"
     exit
 fi
 
@@ -66,7 +66,7 @@ lttng destroy
 status=$?
 if test $status -ne 0
 then
-    echo "command lttng distroy failed"
+    echo "command lttng distroy [FAIL]"
     exit
 fi
 

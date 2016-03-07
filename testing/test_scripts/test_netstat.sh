@@ -27,9 +27,9 @@ netstat -at
 status=$?
 if test $status -eq 0
 then
-    echo "command netstat -at passed"
+    echo "command netstat -at [PASS]"
 else
-    echo "command netstat -at failed"
+    echo "command netstat -at [FAIL]"
 exit
 fi
 
@@ -39,9 +39,9 @@ netstat -au
 status=$?
 if test $status -eq 0
 then
-    echo "command netstat -au passed"
+    echo "command netstat -au [PASS]"
 else
-    echo "command netstat -au failed"
+    echo "command netstat -au [FAIL]"
     exit
 fi
 
@@ -51,9 +51,9 @@ netstat -ax
 status=$?
 if test $status -eq 0
 then
-    echo "command netstat -ax passed"
+    echo "command netstat -ax [PASS]"
 else
-    echo "command netstat -ax failed"
+    echo "command netstat -ax [FAIL]"
     exit
 fi
 exit

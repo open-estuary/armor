@@ -14,9 +14,9 @@ df --v
 status=$?
 if test $status -eq 0
 then
-    echo "command df --v  passed"
+    echo "command df --v  [PASS]"
 else
-    echo "command df --v failed"
+    echo "command df --v [FAIL]"
     exit
 fi
 
@@ -25,9 +25,9 @@ df
 status=$?
 if test $status -eq 0
 then
-    echo "command df passed"
+    echo "command df [PASS]"
 else
-    echo "command df failed"
+    echo "command df [FAIL]"
 exit
 fi
 exit

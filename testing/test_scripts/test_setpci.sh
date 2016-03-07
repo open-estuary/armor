@@ -13,9 +13,9 @@ setpci --version
 status=$?
 if test $status -eq 0
 then
-    echo "command setpci --version passed"
+    echo "command setpci --version [PASS]"
 else
-    echo "command setpci --version failed"
+    echo "command setpci --version [FAIL]"
     exit
 fi
 
@@ -25,9 +25,9 @@ setpci -s 0 device_id vendor_id
 status=$?
 if test $status -eq 0
 then
-    echo "command setpci -s 0 device_id vendor_id passed"
+    echo "command setpci -s 0 device_id vendor_id [PASS]"
 else
-    echo "command setpci -s 0 device_id vendor_id failed"
+    echo "command setpci -s 0 device_id vendor_id [FAIL]"
 exit
 fi
 exit

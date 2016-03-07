@@ -27,7 +27,7 @@ sleep 1
 status=$?
 if test $status -ne 0
 then
-    echo "command ./kprobe_test faild"
+    echo "command ./kprobe_test [FAIL]"
     exit
 fi
 

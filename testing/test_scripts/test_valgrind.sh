@@ -13,9 +13,9 @@ valgrind --version
 status=$?
 if test $status -eq 0
 then
-    echo "command valgrind --version passed"
+    echo "command valgrind --version [PASS]"
 else
-    echo "command valgrind --version failed"
+    echo "command valgrind --version [FAIL]"
     exit
 fi
 
@@ -24,9 +24,9 @@ valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 
 status=$?
 if test $status -eq 0
 then
-    echo "command valgrind --tool=memcheck ... passed"
+    echo "command valgrind --tool=memcheck ... [PASS]"
 else
-    echo "command valgrind --tool=memcheck... failed"
+    echo "command valgrind --tool=memcheck... [FAIL]"
 exit
 fi
 

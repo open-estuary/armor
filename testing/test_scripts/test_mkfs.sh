@@ -13,9 +13,9 @@ mkfs -V
 status=$?
 if test $status -eq 0
 then
-    echo "command mkfs -V passed"
+    echo "command mkfs -V [PASS]"
 else
-    echo "command mkfs -V failed"
+    echo "command mkfs -V [FAIL]"
     exit
 fi
 exit

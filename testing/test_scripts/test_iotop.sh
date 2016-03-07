@@ -13,9 +13,9 @@ iotop --version
 status=$?
 if test $status -eq 0
 then
-   echo "Command iotop  -v passed"
+   echo "Command iotop  -v [PASS]"
 else
-   echo "Command iotop -v failed"
+   echo "Command iotop -v [FAIL]"
    exit
 fi
 
@@ -24,9 +24,9 @@ iotop -b -n 3
 status=$?
 if test $status -eq 0
 then
-   echo "Command iotop -b -n 3 passed"
+   echo "Command iotop -b -n 3 [PASS]"
 else
-   echo "Command iotop -b -n 3 failed"
+   echo "Command iotop -b -n 3 [FAIL]"
    exit
 fi
 exit

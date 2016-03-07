@@ -13,9 +13,9 @@ lscpu -V
 status=$?
 if test $status -eq 0
 then
-    echo "command lscpu -V passed"
+    echo "command lscpu -V [PASS]"
 else
-    echo "command lscpu -V failed"
+    echo "command lscpu -V [FAIL]"
     exit
 fi
  
@@ -25,9 +25,9 @@ lscpu
 status=$?
 if test $status -eq 0
 then
-    echo "command lscpu passed"
+    echo "command lscpu [PASS]"
 else
-    echo "command lscpu failed"
+    echo "command lscpu [FAIL]"
     exit
 fi
 exit

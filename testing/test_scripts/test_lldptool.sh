@@ -13,9 +13,9 @@ lldptool -v
 status=$?
 if test $status -eq 0
 then
-   echo "Command lldptool -v passed"
+   echo "Command lldptool -v [PASS]"
 else
-   echo "Command lldptool -v failed"
+   echo "Command lldptool -v [FAIL]"
    exit
 fi
 
@@ -24,9 +24,9 @@ lldptool set-lldp -i eth3 adminStatus=rxtx
 status=$?
 if test $status -eq 0
 then
-   echo "Command  lldptool set-lldp -i eth3 adminStatus=rxtx  passed"
+   echo "Command  lldptool set-lldp -i eth3 adminStatus=rxtx  [PASS]"
 else
-   echo "Command lldptool set-lldp -i eth3 adminStatus=rxtx failed"
+   echo "Command lldptool set-lldp -i eth3 adminStatus=rxtx [FAIL]"
    exit
 fi
 
@@ -35,9 +35,9 @@ lldptool -t -i eth3
 status=$?
 if test $status -eq 0
 then
-   echo "Command lldptool -t -i eth3 passed"
+   echo "Command lldptool -t -i eth3 [PASS]"
 else
-   echo "Command lldptool -t -i eth3 failed"
+   echo "Command lldptool -t -i eth3 [FAIL]"
    exit
 fi
 exit

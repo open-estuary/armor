@@ -14,9 +14,9 @@ top -v
 status=$?
 if test $status -eq 0
 then
-    echo "command top -V passed"
+    echo "command top -V [PASS]"
 else
-    echo "command top -V failed"
+    echo "command top -V [FAIL]"
     exit
 fi
 
@@ -25,9 +25,9 @@ top -n 2
 status=$?
 if test $status -eq 0
 then
-    echo "command top -n 2 passed"
+    echo "command top -n 2 [PASS]"
 else
-    echo "command top -n 2 failed"
+    echo "command top -n 2 [FAIL]"
     exit
 fi
 exit

@@ -14,9 +14,9 @@ ltrace --v
 status=$?
 if test $status -eq 0
 then
-   echo "Command ltrace --v passed"
+   echo "Command ltrace --v [PASS]"
 else
-   echo "Command ltrace --v failed"
+   echo "Command ltrace --v [FAIL]"
    exit
 fi
 
@@ -25,9 +25,9 @@ ltrace ./test_app
 status=$?
 if test $status -eq 0 
 then 
-   echo "Command ltrace ./test_app passed"
+   echo "Command ltrace ./test_app [PASS]"
 else   
-   echo "Command ltrace ./test_app failed"
+   echo "Command ltrace ./test_app [FAIL]"
    exit
 fi
 exit

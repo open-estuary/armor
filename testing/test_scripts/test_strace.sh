@@ -14,9 +14,9 @@ strace -V
 status=$?
 if test $status -eq 0
 then
-    echo "command strace -V passed"
+    echo "command strace -V [PASS]"
 else
-    echo "command strace -V failed"
+    echo "command strace -V [FAIL]"
     exit
 fi
 
@@ -26,9 +26,9 @@ strace -c ls /home
 status=$?
 if test $status -eq 0
 then
-    echo "command strace -c ls /home passed"
+    echo "command strace -c ls /home [PASS]"
 else
-echo "command strace -c ls /home failed"
+echo "command strace -c ls /home [FAIL]"
     exit
 fi
 exit

@@ -13,9 +13,9 @@ tiptop --version
 status=$?
 if test $status -eq 0
 then
-   echo "Command tiptop  --version passed"
+   echo "Command tiptop  --version [PASS]"
 else
-   echo "Command tiptop --version failed"
+   echo "Command tiptop --version [FAIL]"
    exit
 fi
 
@@ -24,9 +24,9 @@ tiptop -d 2 -n 4
 status=$?
 if test $status -eq 0 
 then 
-   echo "Command tiptop -d 2 -n 4 passed"
+   echo "Command tiptop -d 2 -n 4 [PASS]"
 else   
-   echo "Command tiptop -d 2 -n 4 failed"
+   echo "Command tiptop -d 2 -n 4 [FAIL]"
    exit
 fi
 exit

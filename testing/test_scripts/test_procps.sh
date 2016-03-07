@@ -19,9 +19,9 @@ ps --version
 status=$?
 if test $status -eq 0
 then
-   echo "Command ps --version passed"
+   echo "Command ps --version [PASS]"
 else
-   echo "Command ps --version failed"
+   echo "Command ps --version [FAIL]"
    exit
 fi
 
@@ -30,9 +30,9 @@ ps -ef
 status=$?
 if test $status -eq 0
 then
-   echo "Command ps -ef passed"
+   echo "Command ps -ef [PASS]"
 else
-   echo "Command ps -ef failed"
+   echo "Command ps -ef [FAIL]"
    exit
 fi
 
@@ -41,9 +41,9 @@ w
 status=$?
 if test $status -eq 0
 then
-   echo "Command w passed"
+   echo "Command w [PASS]"
 else
-   echo "Command w failed"
+   echo "Command w [FAIL]"
    exit
 fi
 
@@ -52,9 +52,9 @@ free
 status=$?
 if test $status -eq 0
 then
-   echo "Command free passed"
+   echo "Command free [PASS]"
 else
-   echo "Command free failed"
+   echo "Command free [FAIL]"
    exit
 fi
 
@@ -63,9 +63,9 @@ slabtop -o
 status=$?
 if test $status -eq 0
 then
-   echo "Command slabtop -o passed"
+   echo "Command slabtop -o [PASS]"
 else
-   echo "Command slabtop -o failed"
+   echo "Command slabtop -o [FAIL]"
    exit
 fi
 

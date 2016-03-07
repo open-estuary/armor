@@ -13,9 +13,9 @@ stap  --version
 status=$?
 if test $status -eq 0
 then
-   echo "Command stap --version passed"
+   echo "Command stap --version [PASS]"
 else
-   echo "Command stap --version failed"
+   echo "Command stap --version [FAIL]"
    exit
 fi
 echo "No further stap tests are supported"

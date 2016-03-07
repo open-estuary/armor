@@ -13,9 +13,9 @@ tcpdump --version
 status=$?
 if test $status -eq 0
 then
-    echo "command tcpdump --version passed"
+    echo "command tcpdump --version [PASS]"
 else
-    echo "command tcpdump --version failed"
+    echo "command tcpdump --version [FAIL]"
     exit
 fi
 
@@ -24,9 +24,9 @@ tcpdump -D
 status=$?
 if test $status -eq 0
 then
-    echo "command tcpdump -D passed"
+    echo "command tcpdump -D [PASS]"
 else
-    echo "command tcpdump -D failed"
+    echo "command tcpdump -D [FAIL]"
     exit
 fi
 
@@ -35,9 +35,9 @@ tcpdump -i any -c 5
 status=$?
 if test $status -eq 0
 then
-    echo "command  tcpdump -i any -c 5 passed"
+    echo "command  tcpdump -i any -c 5 [PASS]"
 else
-    echo "command  tcpdump -i any -c 5 failed"
+    echo "command  tcpdump -i any -c 5 [FAIL]"
     exit
 fi
 exit

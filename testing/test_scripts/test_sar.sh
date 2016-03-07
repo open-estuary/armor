@@ -31,9 +31,9 @@ sar -u
 status=$?
 if test $status -eq 0 
 then 
-   echo "Command sar -u passed"
+   echo "Command sar -u [PASS]"
 else   
-   echo "Command sar -u failed"
+   echo "Command sar -u [FAIL]"
    exit
 fi
  
@@ -43,9 +43,9 @@ sar -u ALL
 status=$?
 if test $status -eq 0 
 then 
-   echo "Command sar -u ALL passed"
+   echo "Command sar -u ALL [PASS]"
 else
-   echo "Command sar -u ALL failed"
+   echo "Command sar -u ALL [FAIL]"
    exit
 fi
 exit

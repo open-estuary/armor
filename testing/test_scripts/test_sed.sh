@@ -13,9 +13,9 @@ sed --version
 status=$?
 if test $status -eq 0
 then
-    echo "command sed --version passed"
+    echo "command sed --version [PASS]"
 else
-    echo "command sed --version failed"
+    echo "command sed --version [FAIL]"
     exit
 fi
 
@@ -24,9 +24,9 @@ echo windows server | sed s/windows/linux/
 status=$?
 if test $status -eq 0
 then
-    echo "command sed s/windows/linux/ passed"
+    echo "command sed s/windows/linux/ [PASS]"
 else
-    echo "command sed s/windows/linux/ failed"
+    echo "command sed s/windows/linux/ [FAIL]"
     exit
 fi
 exit

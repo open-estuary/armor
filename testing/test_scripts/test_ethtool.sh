@@ -20,7 +20,7 @@ else
     exit
 fi
 
-nw_if=$(ip route  | awk '{ print $3; exit }')
+nw_if=$(ip route  | awk '{ print $5; exit }')
 echo "nw_if = $nw_if"
 echo "ethtool $nw_if - List ethernet device's properties"
 ethtool $nw_if    

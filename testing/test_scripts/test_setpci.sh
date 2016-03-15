@@ -30,5 +30,16 @@ else
     echo "command setpci -s 0 device_id vendor_id [FAIL]"
 exit
 fi
+
+echo " setpci --dumpregs"
+setpci --dumpregs
+status=$?
+if test $status -eq 0
+then
+    echo "command setpci --dumpregs [PASS]"
+else
+    echo "command setpci --dumpregs [FAIL]"
+exit
+fi
 exit
 

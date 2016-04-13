@@ -22,6 +22,8 @@ zypper install -y popt-devel
 zypper install -y libxml2-devel
 zypper install -y libuuid-devel
 zypper install -y liburcu-devel
+zypper install -y asciido
+zypper install -y xmlto
 
 zypper install -y glib2-devel #(for babeltrace)
 autoreconf -iv #(for babeltrace)

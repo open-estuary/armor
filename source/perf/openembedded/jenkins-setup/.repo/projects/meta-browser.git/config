@@ -1,0 +1,7 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+[remote "OSSystems"]
+	url = git://github.com/OSSystems/meta-browser
+	projectname = meta-browser
+	fetch = +refs/heads/*:refs/remotes/OSSystems/*

@@ -1,0 +1,11 @@
+#Readme for building perf from open-estuary/kernel/tools/perf on Openembedded build setup.
+
+#How to build perf
+Run ./jenkins-setup/oe_perf_build.sh
+
+#How to extract perf and dependent component binaries, 
+# whcih built in the previous step.
+./jenkins-setup/oe_perf_install.sh
+#binaries will be present in the local 'jenkins-setup/perf_binaries' folder. 
+
+# Please refer for more details about Linaro OpenEmbedded build setup- https://wiki.linaro.org/HowTo/ARMv8/OpenEmbedded

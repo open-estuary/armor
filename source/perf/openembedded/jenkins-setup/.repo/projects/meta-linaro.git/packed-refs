@@ -1,0 +1,41 @@
+# pack-refs with: peeled fully-peeled 
+dbe0db0a1a5c015feb84ef689f48421594cb0b51 refs/remotes/linaro/daisy
+041f641faeba4360f888ed842d8e6cee3cacfc2a refs/remotes/linaro/danny
+03bceadf7d9f70d7b013f453e81b2b9d1b7cdbc7 refs/remotes/linaro/denzil
+fb102504ca50767a427ea4fbe970ce631f5161c6 refs/remotes/linaro/dizzy
+a6b3567c93dd49f74a7e71d8d34c16f8d132578c refs/remotes/linaro/dora
+c9f78d6eff14ada3f2bc960e81883b27a10afecc refs/remotes/linaro/dylan
+10b71bed9cfe76baa22c72806ff814cf85c2f73b refs/remotes/linaro/fido
+12993e6bc8658ee37d303d8d59007f8dd9ab2b30 refs/remotes/linaro/jethro
+3f4b3fc3c579071eba81e83db9f36a9a4f9ef162 refs/remotes/linaro/master
+95900d20ea0f713542f17ec4b963f74825896274 refs/tags/14.02
+^762394cc968b8229f594f22b3eb4fc69828a64dc
+621a70088914190966e4b01cedcdb58c3db22c27 refs/tags/14.03
+^b9fed396b98e58236f9b809fb88e721e1d072b51
+b45e51b5273d9c6bccdf2fef6bb480d97a7d39f9 refs/tags/14.04
+^95421121ccf1277cdbcb00828ac2be6ba7dde18b
+1cdfdf09887e4dc4967e96e8da45ada7c71cfe96 refs/tags/14.05
+^dac84e261099aa7a4e877b2783e4559356610486
+ca4bc75d5fd9f7b82e507a50cebf08628cf897bc refs/tags/14.08
+275f96274d0b9939b517eb627dc3a13536c7c5e0 refs/tags/14.09
+32abe32aee8e257ec199d516dadbff8626415ae4 refs/tags/14.10
+0b504659c74b9918c175ba79b5a28d8ee811a39f refs/tags/14.11
+9744c04031821242e8473adddf4137ffc31be8ee refs/tags/14.12
+0dc86c1650ae48522ec21eb11fe2ac12a9c0c468 refs/tags/15.02
+8ad7c2d0432288c3b1b2e943bcaedfd8b516e5cd refs/tags/15.03
+770226ad9c4487cd03ed92e99f338349e955d7ff refs/tags/15.06
+dbbd8c755de5ee7c5cf5d0ebe1e5696f9cbd6604 refs/tags/15.07
+dbbd8c755de5ee7c5cf5d0ebe1e5696f9cbd6604 refs/tags/15.08
+131180adfa975cc2b73e8ada3fa48e7dd1493b90 refs/tags/15.09
+839b0393df5b077baf59a43f6e17095477046a57 refs/tags/15.10
+acf4f1f701e07670ec88435897a74f88dbe8ba87 refs/tags/15.11
+b0e2b733c4350caec4d5a3dd75da5de9acad5fa7 refs/tags/15.12
+346c76e9fa41b5f11f76193a6762da288fa48efe refs/tags/16.01
+b4f5e1078b7eaea5524061ff0bd4134d2d9988de refs/tags/4.6-2012.05
+4e04a8c18d56c3ab47eb487a61e8620269267b5b refs/tags/4.6-2012.06
+b4f5e1078b7eaea5524061ff0bd4134d2d9988de refs/tags/4.7-2012.05
+4e04a8c18d56c3ab47eb487a61e8620269267b5b refs/tags/4.7-2012.06
+b4f5e1078b7eaea5524061ff0bd4134d2d9988de refs/tags/binary-4.6-2012.03
+34b63dced697af2dde6750e1510598beb6917950 refs/tags/binary-4.6-2012.06
+03bceadf7d9f70d7b013f453e81b2b9d1b7cdbc7 refs/tags/denzil-4.6-2012.05
+03bceadf7d9f70d7b013f453e81b2b9d1b7cdbc7 refs/tags/denzil-binary-4.6-2012.03

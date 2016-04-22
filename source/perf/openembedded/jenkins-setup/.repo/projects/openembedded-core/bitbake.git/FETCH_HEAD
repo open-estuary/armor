@@ -1,0 +1,63 @@
+b801e442b0163a73fe4624e3a7dec4bf7bb63f3e		branch '1.10' of git://git.openembedded.org/bitbake
+02ba14facdb92f76d0f034c2ded1d459be06c585		branch '1.12' of git://git.openembedded.org/bitbake
+8df3f86bbc0edc40349362aa4a72672142ce6dbd		branch '1.14' of git://git.openembedded.org/bitbake
+9c52c73fd2498e65be5f0da24dc2ae3803eb42eb		branch '1.16' of git://git.openembedded.org/bitbake
+0f7b6a03c64292983d2cc715e5e5badb1cdc5cae		branch '1.18' of git://git.openembedded.org/bitbake
+3bb3f1823bdd46ab34577d43f1e39046a32bca77		branch '1.20' of git://git.openembedded.org/bitbake
+d9a695e9e546cf3a158c88b0ecf2ecc132fb52e5		branch '1.22' of git://git.openembedded.org/bitbake
+370a19bf956a2fba5bf4db3d72806e17d7f9e000		branch '1.24' of git://git.openembedded.org/bitbake
+b09966906ef054834f0b465f0c5a2a937b4c4a4c		branch '1.26' of git://git.openembedded.org/bitbake
+0e9d8d63ddb35d181d4e470585d1e4a4c646cd00		branch '1.28' of git://git.openembedded.org/bitbake
+eda84e7271639baac4cb0623ded03b1d7a1ffcae		branch '1.3' of git://git.openembedded.org/bitbake
+b0afdf6e9c4ab8b8f7637d510ba4a3d89cff3c54		branch '1.4' of git://git.openembedded.org/bitbake
+39f97f81abd9955ea5bd80bd1d237bd32f46bb5e		branch '1.6' of git://git.openembedded.org/bitbake
+5e9a997389b2ce05d48adaa0514b28f0cdcab52b		branch '1.8' of git://git.openembedded.org/bitbake
+da444c9761ee15a59ea8880e3f812a5d3f1a1aaa		branch 'master' of git://git.openembedded.org/bitbake
+da444c9761ee15a59ea8880e3f812a5d3f1a1aaa		branch 'master-next' of git://git.openembedded.org/bitbake
+bca343b94a8ce555f3f697e610b735704486f421		branch 'master-poky' of git://git.openembedded.org/bitbake
+6720963ba3e6e7f6e82b4d778faba803436c977e		branch 'next' of git://git.openembedded.org/bitbake
+cdc86bf314bd1c2be3d8f2292eede33ff6be7b54		branch 'noupdatedata' of git://git.openembedded.org/bitbake
+771e891ab61c4e7dbb57a16fec533a9865b713ca		branch 'pristine-tar' of git://git.openembedded.org/bitbake
+6861647b8c06e1ccd8e612b6ef83e82943ef860b		branch 'wmat' of git://git.openembedded.org/bitbake
+b745052041a67942197f041fb8d2eeaf1a6ed799		branch 'wmat2' of git://git.openembedded.org/bitbake
+6017f6f9f44ae34bce1f2bcb249f89866998593e	not-for-merge	tag '1.0' of git://git.openembedded.org/bitbake
+59d4f4d495748b2aa8b2752cfa5a3b4fde84926e	not-for-merge	tag '1.1' of git://git.openembedded.org/bitbake
+db5c651eea0182cfc37f7e00d45e7a2b5d674988	not-for-merge	tag '1.10.0' of git://git.openembedded.org/bitbake
+094010f4802484f44c92b0cbd1bdde4039dd5dd2	not-for-merge	tag '1.10.1' of git://git.openembedded.org/bitbake
+8f1866ccdae695ab828ff46d52b6304dc9c248ff	not-for-merge	tag '1.10.2' of git://git.openembedded.org/bitbake
+6fd123167867deea3a4b07ef3cbc49659859e1ad	not-for-merge	tag '1.12.0' of git://git.openembedded.org/bitbake
+c3c2ad6f22e35b893a353d4c21d0e923e46ad07b	not-for-merge	tag '1.13.1' of git://git.openembedded.org/bitbake
+5d41720d1550c04aac76275614ca15110c1c7f52	not-for-merge	tag '1.13.2' of git://git.openembedded.org/bitbake
+f0b5d16426b983a67c51c47f3542162108bd4156	not-for-merge	tag '1.13.3' of git://git.openembedded.org/bitbake
+bb5bcb4431b0b258b570953186efb82e87892bd7	not-for-merge	tag '1.14.0' of git://git.openembedded.org/bitbake
+bdee1fd43ee2abe5f107bd88a2170214159992f8	not-for-merge	tag '1.15.1' of git://git.openembedded.org/bitbake
+c83de448375764e9986fc6eb079877919f8baa20	not-for-merge	tag '1.15.2' of git://git.openembedded.org/bitbake
+45fe426373b36b906848153eb7cc489b7669ab8a	not-for-merge	tag '1.15.3' of git://git.openembedded.org/bitbake
+077c29bd27723f10467ec49d9f97fbb29d8a0594	not-for-merge	tag '1.16.0' of git://git.openembedded.org/bitbake
+f86fd85219704b8ce93ca79d7969cb353b4d22e8	not-for-merge	tag '1.17.0' of git://git.openembedded.org/bitbake
+1d5cd33cd53d54110c28b0c8d399532ec0ab0ad5	not-for-merge	tag '1.2' of git://git.openembedded.org/bitbake
+aeb38884d232a93daf58d26662cbce76e7ede439	not-for-merge	tag '1.2.1' of git://git.openembedded.org/bitbake
+2ff895b5507611b8fb056e09c368b33a5455ffac	not-for-merge	tag '1.26.0' of git://git.openembedded.org/bitbake
+14b8c61fd69b44e5cd2d32fff2b102783de3619c	not-for-merge	tag '1.3.0' of git://git.openembedded.org/bitbake
+7247d4db438a1994e903250a9edaad0592dd5e2a	not-for-merge	tag '1.3.1' of git://git.openembedded.org/bitbake
+059018c768790c80c5f7766d03a7dc9b7daeb826	not-for-merge	tag '1.3.2' of git://git.openembedded.org/bitbake
+6791d5beb9aa46054bbf0a4a34f802be10eef9bd	not-for-merge	tag '1.3.3' of git://git.openembedded.org/bitbake
+e9f5c7234ab80d053b7dd9011978cb8f68b747c2	not-for-merge	tag '1.4.2' of git://git.openembedded.org/bitbake
+ec8d1cba1f0f397a9d5e8c7a5903fbc3b8e6bade	not-for-merge	tag '1.4.4' of git://git.openembedded.org/bitbake
+862a6e7e8860765d43d74a2128893d0a171723a2	not-for-merge	tag '1.6.0' of git://git.openembedded.org/bitbake
+b72be28933502be03bf20a837e08913e898d66ab	not-for-merge	tag '1.6.2' of git://git.openembedded.org/bitbake
+4b68ca6e7bad18a9e98a1286e8829f87aae6edcf	not-for-merge	tag '1.6.4' of git://git.openembedded.org/bitbake
+bc3a4b5148cec02cdf150064da6f5e65281da6a4	not-for-merge	tag '1.6.6' of git://git.openembedded.org/bitbake
+cf077ca4cb835310cf195f9f6055add79c29f8d3	not-for-merge	tag '1.6.8' of git://git.openembedded.org/bitbake
+442c741e2ba071a584bfbe4eef54c662aeb61822	not-for-merge	tag '1.7.2' of git://git.openembedded.org/bitbake
+91a0c515bb013b03f5a7a3e7a9f6690d0bbe346e	not-for-merge	tag '1.8.0' of git://git.openembedded.org/bitbake
+fef0b36f856dbc6abadc1c4892f86c62e8100db0	not-for-merge	tag '1.8.10' of git://git.openembedded.org/bitbake
+154b4de762a8f7bc873d21b3071578579898a4ff	not-for-merge	tag '1.8.12' of git://git.openembedded.org/bitbake
+91a84dd3493204fb794d0b1414b9b32f40512200	not-for-merge	tag '1.8.14' of git://git.openembedded.org/bitbake
+1c06edb545d621cc9252f9fdb602ea078da9eee4	not-for-merge	tag '1.8.16' of git://git.openembedded.org/bitbake
+85303120367c9807c01a22cec58737dd02b3ddf1	not-for-merge	tag '1.8.18' of git://git.openembedded.org/bitbake
+05e3777b8127cf773c10476482032bb93d0b9df9	not-for-merge	tag '1.8.19' of git://git.openembedded.org/bitbake
+536bf3f1579a8b6a539c5b4fbc25512675627bcd	not-for-merge	tag '1.8.2' of git://git.openembedded.org/bitbake
+8f5ba3ae42ecc814ac25e436506c3ae135c9ccb1	not-for-merge	tag '1.8.4' of git://git.openembedded.org/bitbake
+436f17b0e27697d26e2f2213c4602e256694dfde	not-for-merge	tag '1.8.6' of git://git.openembedded.org/bitbake
+c2908cd5e9b726e5f113d216ecaa69f6a7410b4e	not-for-merge	tag '1.8.8' of git://git.openembedded.org/bitbake

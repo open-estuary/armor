@@ -1,0 +1,17 @@
+{
+  "core.repositoryformatversion": [
+    "0"
+  ], 
+  "remote.OSSystems.fetch": [
+    "+refs/heads/*:refs/remotes/OSSystems/*"
+  ], 
+  "core.filemode": [
+    "true"
+  ], 
+  "remote.OSSystems.projectname": [
+    "meta-browser"
+  ], 
+  "remote.OSSystems.url": [
+    "git://github.com/OSSystems/meta-browser"
+  ]
+}

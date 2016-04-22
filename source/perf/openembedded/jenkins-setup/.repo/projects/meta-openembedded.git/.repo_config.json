@@ -1,0 +1,17 @@
+{
+  "core.repositoryformatversion": [
+    "0"
+  ], 
+  "core.filemode": [
+    "true"
+  ], 
+  "remote.oe.url": [
+    "git://git.openembedded.org/meta-openembedded"
+  ], 
+  "remote.oe.projectname": [
+    "meta-openembedded"
+  ], 
+  "remote.oe.fetch": [
+    "+refs/heads/*:refs/remotes/oe/*"
+  ]
+}

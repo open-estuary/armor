@@ -1,0 +1,1 @@
+0000000000000000000000000000000000000000 d6c69df33e5b447eb01ee7fca921b94c3a853203 Shiju Jose <shiju.jose@huawei.com> 1459851350 +0100	fetch --quiet oe --tags +refs/heads/*:refs/remotes/oe/* +refs/heads/master:refs/remotes/oe/master: storing head

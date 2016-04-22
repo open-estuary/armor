@@ -1,0 +1,1 @@
+0000000000000000000000000000000000000000 2126d377e1dd5cf2158d71edc87ba496c2f3f8cf Shiju Jose <shiju.jose@huawei.com> 1459851222 +0100	fetch --progress origin --tags +refs/heads/*:refs/remotes/origin/* +refs/heads/master:refs/remotes/origin/master: storing head

@@ -1,0 +1,7 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+[remote "linaro"]
+	url = git://git.linaro.org/openembedded/meta-linaro
+	projectname = openembedded/meta-linaro
+	fetch = +refs/heads/*:refs/remotes/linaro/*

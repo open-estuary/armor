@@ -1,0 +1,7 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+[remote "oe"]
+	url = git://git.openembedded.org/openembedded-core
+	projectname = openembedded-core
+	fetch = +refs/heads/*:refs/remotes/oe/*

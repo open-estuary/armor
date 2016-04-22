@@ -1,0 +1,8 @@
+TODO:
+ - split out init and build steps into 2 scripts
+ - make 'build' command parameterized too
+ - remove .sh extension to all scripts
+ - use set -e everywhere for better failure detection
+ - support for building several images (and with proper buildhistory)
+ - avoid repo sync for each build (for matrix based workspace)
+ - remove hardcoded /mnt/ci_build instances

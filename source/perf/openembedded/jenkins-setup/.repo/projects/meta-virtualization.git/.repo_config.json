@@ -1,0 +1,17 @@
+{
+  "core.repositoryformatversion": [
+    "0"
+  ], 
+  "remote.yocto.fetch": [
+    "+refs/heads/*:refs/remotes/yocto/*"
+  ], 
+  "core.filemode": [
+    "true"
+  ], 
+  "remote.yocto.projectname": [
+    "meta-virtualization"
+  ], 
+  "remote.yocto.url": [
+    "git://git.yoctoproject.org/meta-virtualization"
+  ]
+}

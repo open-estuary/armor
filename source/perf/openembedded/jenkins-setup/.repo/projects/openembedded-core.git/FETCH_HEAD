@@ -1,0 +1,14 @@
+80c1ab1248ff38ba97cf5780fc05ff1321e14e10		branch '2011-1' of git://git.openembedded.org/openembedded-core
+d0326ff5abde814da8647debfd559fcb9aede3a4		branch 'daisy' of git://git.openembedded.org/openembedded-core
+d6c69df33e5b447eb01ee7fca921b94c3a853203		branch 'danny' of git://git.openembedded.org/openembedded-core
+94c375a281378413d24a402ec6a59762d0eb5b85		branch 'denzil' of git://git.openembedded.org/openembedded-core
+c50e30cb078ca0ad6f76241f0b0a5557cc17e3c0		branch 'dizzy' of git://git.openembedded.org/openembedded-core
+3f615a120c96b2b4f4312764d0b882f12bb40597		branch 'dora' of git://git.openembedded.org/openembedded-core
+f07a4e0d80f5e0dd94514f6aae11a7bd56034f30		branch 'dylan' of git://git.openembedded.org/openembedded-core
+1ebf604cae8d9bd3d2c10d06cd126e79e13732ee		branch 'fido' of git://git.openembedded.org/openembedded-core
+4d879cb8d7384ac4a96f22c1664b8875f2d8f615		branch 'jethro' of git://git.openembedded.org/openembedded-core
+d60806e56aed2f62f6a0e030a564f7fdc4a1314d		branch 'master' of git://git.openembedded.org/openembedded-core
+8c281058f44c4d9a6b228efdfb496c5c452451f7		branch 'master-next' of git://git.openembedded.org/openembedded-core
+d563aa024d699d253d10ee5dae53901c06503579		branch 'master-next-1.9' of git://git.openembedded.org/openembedded-core
+2d39eb43eecd7671829addefa3cf69fcb2f45c8a	not-for-merge	tag '2011-1' of git://git.openembedded.org/openembedded-core
+0a2174038f2c47bb9a3a0482889eaae863ea3d3b	not-for-merge	tag '2015-4' of git://git.openembedded.org/openembedded-core

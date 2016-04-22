@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled 
+655ca30099fcd47a878d63d2d80a79174c1ff8ff refs/remotes/yocto/daisy
+8ec8270017fbeae8fcb8c2d82a60a9f5116b0cf2 refs/remotes/yocto/dizzy
+7d7c38165c1a5a192f114afaea1ee2d80fb784dd refs/remotes/yocto/dora
+15a0d3432ea8d4441417b689a58aae8a6a7fb860 refs/remotes/yocto/dylan
+0277cbcb47db4239d0a4aa3b37c5c6a705070951 refs/remotes/yocto/fido
+2e74fb085b2d0a41a90e4d96459f8833a99d0ab8 refs/remotes/yocto/jethro
+a715fe0d9f9b40067036c9ee480295c9087dc894 refs/remotes/yocto/master
+6b01dcc9db6b6db808ad5a8dc881873fc18bce9e refs/remotes/yocto/master-next

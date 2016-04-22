@@ -1,0 +1,36 @@
+dbe0db0a1a5c015feb84ef689f48421594cb0b51		branch 'daisy' of git://git.linaro.org/openembedded/meta-linaro
+041f641faeba4360f888ed842d8e6cee3cacfc2a		branch 'danny' of git://git.linaro.org/openembedded/meta-linaro
+03bceadf7d9f70d7b013f453e81b2b9d1b7cdbc7		branch 'denzil' of git://git.linaro.org/openembedded/meta-linaro
+fb102504ca50767a427ea4fbe970ce631f5161c6		branch 'dizzy' of git://git.linaro.org/openembedded/meta-linaro
+a6b3567c93dd49f74a7e71d8d34c16f8d132578c		branch 'dora' of git://git.linaro.org/openembedded/meta-linaro
+c9f78d6eff14ada3f2bc960e81883b27a10afecc		branch 'dylan' of git://git.linaro.org/openembedded/meta-linaro
+10b71bed9cfe76baa22c72806ff814cf85c2f73b		branch 'fido' of git://git.linaro.org/openembedded/meta-linaro
+12993e6bc8658ee37d303d8d59007f8dd9ab2b30		branch 'jethro' of git://git.linaro.org/openembedded/meta-linaro
+3f4b3fc3c579071eba81e83db9f36a9a4f9ef162		branch 'master' of git://git.linaro.org/openembedded/meta-linaro
+95900d20ea0f713542f17ec4b963f74825896274	not-for-merge	tag '14.02' of git://git.linaro.org/openembedded/meta-linaro
+621a70088914190966e4b01cedcdb58c3db22c27	not-for-merge	tag '14.03' of git://git.linaro.org/openembedded/meta-linaro
+b45e51b5273d9c6bccdf2fef6bb480d97a7d39f9	not-for-merge	tag '14.04' of git://git.linaro.org/openembedded/meta-linaro
+1cdfdf09887e4dc4967e96e8da45ada7c71cfe96	not-for-merge	tag '14.05' of git://git.linaro.org/openembedded/meta-linaro
+ca4bc75d5fd9f7b82e507a50cebf08628cf897bc	not-for-merge	tag '14.08' of git://git.linaro.org/openembedded/meta-linaro
+275f96274d0b9939b517eb627dc3a13536c7c5e0	not-for-merge	tag '14.09' of git://git.linaro.org/openembedded/meta-linaro
+32abe32aee8e257ec199d516dadbff8626415ae4	not-for-merge	tag '14.10' of git://git.linaro.org/openembedded/meta-linaro
+0b504659c74b9918c175ba79b5a28d8ee811a39f	not-for-merge	tag '14.11' of git://git.linaro.org/openembedded/meta-linaro
+9744c04031821242e8473adddf4137ffc31be8ee	not-for-merge	tag '14.12' of git://git.linaro.org/openembedded/meta-linaro
+0dc86c1650ae48522ec21eb11fe2ac12a9c0c468	not-for-merge	tag '15.02' of git://git.linaro.org/openembedded/meta-linaro
+8ad7c2d0432288c3b1b2e943bcaedfd8b516e5cd	not-for-merge	tag '15.03' of git://git.linaro.org/openembedded/meta-linaro
+770226ad9c4487cd03ed92e99f338349e955d7ff	not-for-merge	tag '15.06' of git://git.linaro.org/openembedded/meta-linaro
+dbbd8c755de5ee7c5cf5d0ebe1e5696f9cbd6604	not-for-merge	tag '15.07' of git://git.linaro.org/openembedded/meta-linaro
+dbbd8c755de5ee7c5cf5d0ebe1e5696f9cbd6604	not-for-merge	tag '15.08' of git://git.linaro.org/openembedded/meta-linaro
+131180adfa975cc2b73e8ada3fa48e7dd1493b90	not-for-merge	tag '15.09' of git://git.linaro.org/openembedded/meta-linaro
+839b0393df5b077baf59a43f6e17095477046a57	not-for-merge	tag '15.10' of git://git.linaro.org/openembedded/meta-linaro
+acf4f1f701e07670ec88435897a74f88dbe8ba87	not-for-merge	tag '15.11' of git://git.linaro.org/openembedded/meta-linaro
+b0e2b733c4350caec4d5a3dd75da5de9acad5fa7	not-for-merge	tag '15.12' of git://git.linaro.org/openembedded/meta-linaro
+346c76e9fa41b5f11f76193a6762da288fa48efe	not-for-merge	tag '16.01' of git://git.linaro.org/openembedded/meta-linaro
+b4f5e1078b7eaea5524061ff0bd4134d2d9988de	not-for-merge	tag '4.6-2012.05' of git://git.linaro.org/openembedded/meta-linaro
+4e04a8c18d56c3ab47eb487a61e8620269267b5b	not-for-merge	tag '4.6-2012.06' of git://git.linaro.org/openembedded/meta-linaro
+b4f5e1078b7eaea5524061ff0bd4134d2d9988de	not-for-merge	tag '4.7-2012.05' of git://git.linaro.org/openembedded/meta-linaro
+4e04a8c18d56c3ab47eb487a61e8620269267b5b	not-for-merge	tag '4.7-2012.06' of git://git.linaro.org/openembedded/meta-linaro
+b4f5e1078b7eaea5524061ff0bd4134d2d9988de	not-for-merge	tag 'binary-4.6-2012.03' of git://git.linaro.org/openembedded/meta-linaro
+34b63dced697af2dde6750e1510598beb6917950	not-for-merge	tag 'binary-4.6-2012.06' of git://git.linaro.org/openembedded/meta-linaro
+03bceadf7d9f70d7b013f453e81b2b9d1b7cdbc7	not-for-merge	tag 'denzil-4.6-2012.05' of git://git.linaro.org/openembedded/meta-linaro
+03bceadf7d9f70d7b013f453e81b2b9d1b7cdbc7	not-for-merge	tag 'denzil-binary-4.6-2012.03' of git://git.linaro.org/openembedded/meta-linaro

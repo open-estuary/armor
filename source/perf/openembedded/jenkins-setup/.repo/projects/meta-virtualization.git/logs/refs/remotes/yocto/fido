@@ -1,0 +1,1 @@
+0000000000000000000000000000000000000000 0277cbcb47db4239d0a4aa3b37c5c6a705070951 Shiju Jose <shiju.jose@huawei.com> 1459851226 +0100	fetch --quiet yocto --tags +refs/heads/*:refs/remotes/yocto/* +refs/heads/master:refs/remotes/yocto/master: storing head

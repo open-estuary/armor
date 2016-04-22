@@ -1,0 +1,1 @@
+0000000000000000000000000000000000000000 a6b3567c93dd49f74a7e71d8d34c16f8d132578c Shiju Jose <shiju.jose@huawei.com> 1459851224 +0100	fetch --quiet linaro --tags +refs/heads/*:refs/remotes/linaro/* +refs/heads/master:refs/remotes/linaro/master: storing head

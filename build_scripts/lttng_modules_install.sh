@@ -18,7 +18,6 @@ sudo cp $(pwd)/lttng-ring-buffer-metadata-mmap-client.ko $2/lib/modules/$kernel_
 sudo cp $(pwd)/lttng-statedump.ko $2/lib/modules/$kernel_version/armor
 sudo cp $(pwd)/lttng-tracer.ko $2/lib/modules/$kernel_version/armor
 sudo cp $(pwd)/probes/lttng-ftrace.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-asoc.ko $2/lib/modules/$kernel_version/armor 
 sudo cp $(pwd)/probes/lttng-probe-block.ko $2/lib/modules/$kernel_version/armor
 sudo cp $(pwd)/probes/lttng-probe-btrfs.ko $2/lib/modules/$kernel_version/armor
 sudo cp $(pwd)/probes/lttng-probe-compaction.ko $2/lib/modules/$kernel_version/armor
@@ -50,7 +49,6 @@ sudo cp $(pwd)/probes/lttng-probe-v4l2.ko $2/lib/modules/$kernel_version/armor
 sudo cp $(pwd)/probes/lttng-probe-vmscan.ko $2/lib/modules/$kernel_version/armor
 sudo cp $(pwd)/probes/lttng-probe-workqueue.ko $2/lib/modules/$kernel_version/armor
 sudo cp $(pwd)/probes/lttng-probe-writeback.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-types.ko $2/lib/modules/$kernel_version/armor
 
 # updating the /lib/modules/<kernel version>/modules.dep file with the list of lttng modules to be installed on bootup
 modules_dep_file=$(echo "$2/lib/modules/$kernel_version/modules.dep")
@@ -60,8 +58,6 @@ modules_dep_file=$(echo "$2/lib/modules/$kernel_version/modules.dep")
 sudo sh -c "echo armor/lttng-probe-kvm.ko: armor/lttng-tracer.ko armor/lttng-statedump.ko armor/lttng-ftrace.ko armor/lttng-lib-ring-buffer.ko >> $modules_dep_file"
 
 sudo sh -c "echo armor/lttng-probe-sock.ko: armor/lttng-tracer.ko armor/lttng-statedump.ko armor/lttng-ftrace.ko armor/lttng-lib-ring-buffer.ko  >> $modules_dep_file"
-
-sudo sh -c "echo armor/lttng-probe-asoc.ko: armor/lttng-tracer.ko armor/lttng-statedump.ko armor/lttng-ftrace.ko armor/lttng-lib-ring-buffer.ko >> $modules_dep_file"
 
 sudo sh -c "echo armor/lttng-ring-buffer-metadata-client.ko: armor/lttng-tracer.ko armor/lttng-statedump.ko armor/lttng-ftrace.ko armor/lttng-lib-ring-buffer.ko  >> $modules_dep_file"
 
@@ -96,8 +92,6 @@ sudo sh -c "echo armor/lttng-probe-module.ko: armor/lttng-tracer.ko armor/lttng-
 sudo sh -c "echo armor/lttng-ring-buffer-client-discard.ko: armor/lttng-tracer.ko armor/lttng-statedump.ko armor/lttng-ftrace.ko armor/lttng-lib-ring-buffer.ko  >> $modules_dep_file"
 
 sudo sh -c "echo armor/lttng-probe-timer.ko: armor/lttng-tracer.ko armor/lttng-statedump.ko armor/lttng-ftrace.ko armor/lttng-lib-ring-buffer.ko >> $modules_dep_file"
-
-sudo sh -c "echo armor/lttng-types.ko: >> $modules_dep_file"
 
 sudo sh -c "echo armor/lttng-probe-net.ko: armor/lttng-tracer.ko armor/lttng-statedump.ko armor/lttng-ftrace.ko armor/lttng-lib-ring-buffer.ko >> $modules_dep_file"
 

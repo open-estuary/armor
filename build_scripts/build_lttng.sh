@@ -16,7 +16,12 @@ if [ "$1" = '' ] || [ "$2" = '' ]; then
 fi
 
 echo "Building the lttng's kernel module..."
-cd ../source/lttng-modules-2.7.1/
+cd ../source/
+git clone https://github.com/lttng/lttng-modules
+cd -
+cp lttng_modules_install.sh ../source/lttng-modules/
+cd ../source/lttng-modules/
+
 make KERNELDIR=$1 
 #install lttng modules to the rootfs. modify and run lttng_modules_install.sh
 sh lttng_modules_install.sh $1 $2  

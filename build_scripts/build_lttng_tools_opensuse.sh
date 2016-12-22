@@ -64,7 +64,6 @@ echo "install prebuilt kernel lttng-modules..."
 depmod -a
 modprobe lttng-probe-kvm
 modprobe lttng-probe-sock
-modprobe lttng-probe-asoc
 modprobe lttng-ring-buffer-metadata-client
 modprobe lttng-probe-printk
 modprobe lttng-probe-napi
@@ -82,7 +81,6 @@ modprobe lttng-probe-signal
 modprobe lttng-probe-module
 modprobe lttng-ring-buffer-client-discard
 modprobe lttng-probe-timer
-modprobe lttng-types
 modprobe lttng-probe-net
 modprobe lttng-probe-writeback
 modprobe lttng-probe-gpio

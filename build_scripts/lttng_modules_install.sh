@@ -8,47 +8,9 @@ kernel_version=$(sudo cat $1/include/config/kernel.release)
 #echo "kernel_version=$kernel_version"
 
 sudo mkdir $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/lib/lttng-lib-ring-buffer.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/lttng-ring-buffer-client-discard.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/lttng-ring-buffer-client-mmap-discard.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/lttng-ring-buffer-client-mmap-overwrite.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/lttng-ring-buffer-client-overwrite.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/lttng-ring-buffer-metadata-client.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/lttng-ring-buffer-metadata-mmap-client.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/lttng-statedump.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/lttng-tracer.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-ftrace.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-block.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-btrfs.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-compaction.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-ext4.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-gpio.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-irq.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-jbd2.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-kmem.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-kvm.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-module.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-napi.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-net.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-power.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-printk.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-random.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-rcu.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-regmap.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-regulator.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-sched.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-scsi.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-signal.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-skb.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-sock.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-statedump.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-sunrpc.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-timer.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-udp.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-v4l2.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-vmscan.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-workqueue.ko $2/lib/modules/$kernel_version/armor
-sudo cp $(pwd)/probes/lttng-probe-writeback.ko $2/lib/modules/$kernel_version/armor
+sudo cp $(pwd)/lib/*.ko $2/lib/modules/$kernel_version/armor
+sudo cp $(pwd)/*.ko $2/lib/modules/$kernel_version/armor
+sudo cp $(pwd)/probes/*.ko $2/lib/modules/$kernel_version/armor
 
 # updating the /lib/modules/<kernel version>/modules.dep file with the list of lttng modules to be installed on bootup
 modules_dep_file=$(echo "$2/lib/modules/$kernel_version/modules.dep")

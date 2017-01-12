@@ -18,14 +18,17 @@ if [ "$1" = '' ]; then
 fi
 
 export KPROBES_KERN_DIR=$1 
-echo $KPROBES_KERN_DIR
+echo "$KPROBES_KERN_DIR"
 
 cd ../source/test_code/kprobes_test_code/
 
 make
 
+# copy prebuilt binary on to the rootfs.
+sudo cp kprobe_test  $2/usr/local/armor/test_scripts
+sudo cp kprobe_test.ko $2/usr/local/armor/test_scripts
+
 cd -
-echo "For testing copy binaries kprobe_test and kprobe_test.ko and script test_kprobes.sh to the rootfs"
 
 echo "Building the Kprobes's test code finished"
 

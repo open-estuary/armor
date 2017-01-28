@@ -42,7 +42,7 @@
 #define KTAP_STACK_SIZE		120 /* enlarge this value for big stack */
 #define KTAP_STACK_SIZE_BYTES	(KTAP_STACK_SIZE * sizeof(ktap_val_t))
 
-#define KTAP_PERCPU_BUFFER_SIZE	(3 * PAGE_SIZE)
+#define KTAP_PERCPU_BUFFER_SIZE	(1 * PAGE_SIZE)
 
 static ktap_cfunction gfunc_get(ktap_state_t *ks, int idx);
 static int gfunc_getidx(ktap_global_state_t *g, ktap_cfunction cfunc);

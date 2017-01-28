@@ -11,7 +11,6 @@
 # this requires lots of memory during the build.
 # Recommend to use amalgmation build as default.
 amalg = 1
-CC=aarch64-linux-gnu-gcc
 
 # Do not instrument the tracer itself:
 ifdef CONFIG_FUNCTION_TRACER

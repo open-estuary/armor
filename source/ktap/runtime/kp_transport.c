@@ -1,9 +1,7 @@
 /*
  * kp_transport.c - ktap transport functionality
  *
- * This file is part of ktap by Jovi Zhangwei.
- *
- * Copyright (C) 2012-2013 Jovi Zhangwei <jovi.zhangwei@gmail.com>.
+ * Copyright (C) 2012-2016, Huawei Technologies.
  *
  * ktap is free software; you can redistribute it and/or modify it
  * under the terms and conditions of the GNU General Public License,
@@ -516,7 +514,7 @@ void kp_transport_event_write(ktap_state_t *ks, struct ktap_event_data *e)
 {
 	struct ring_buffer *buffer = G(ks)->buffer;
 	struct ring_buffer_event *event;
-	struct trace_entry *ev_entry = e->data->raw->frag.data;
+	struct trace_entry *ev_entry = TRACE_EVENT_RAW_DATA(e);
 	struct trace_entry *entry;
 	int entry_size = e->data->raw->size;
 

@@ -8,6 +8,14 @@
 ################################################################################
 #!/bin/bash
     
+#check if installed
+bash check_install.sh iostat
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
 #iostat - report statistics for the CPU, I/O for devices, partitions and NFS.   
 # Testing iostat 
 iostat -V

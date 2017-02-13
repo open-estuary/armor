@@ -1,3 +1,4 @@
+
 ###############################################################################
 
 # This script tests the iotop tool
@@ -8,6 +9,14 @@
 ################################################################################
 #!/bin/bash
     
+#check if installed
+bash check_install.sh iotop
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
 #iotop
 iotop --version
 status=$?

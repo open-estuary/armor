@@ -7,7 +7,14 @@
 
 ################################################################################
 #!/bin/bash
-    
+
+bash check_install.sh slabtop
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+  
 # Testing slabtop
 slabtop --version
 status=$?

@@ -7,6 +7,13 @@
 
 ################################################################################
 #!/bin/bash
+
+bash check_install.sh vmstat
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
     
 #vmstat
 vmstat -V

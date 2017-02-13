@@ -7,7 +7,14 @@
 
 ################################################################################
 #!/bin/bash
-    
+
+bash check_install.sh ps
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+  
 #procps
 ps --version
 #top --version

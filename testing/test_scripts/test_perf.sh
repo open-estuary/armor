@@ -8,6 +8,14 @@
 ################################################################################
 #!/bin/bash
 
+#check if installed
+bash check_install.sh perf
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
 perf list | grep -i "hardware cache event"
 status=$?
 if test $status -eq 0

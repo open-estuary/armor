@@ -7,7 +7,15 @@
 
 ################################################################################
 #!/bin/bash
-    
+ 
+#check if installed
+bash check_install.sh nicstat
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+   
 #nicstat
 nicstat -v   
 status=$?

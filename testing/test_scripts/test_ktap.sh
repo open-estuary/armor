@@ -9,6 +9,14 @@
 #!/bin/bash
 
 modprobe ktapvm
+
+#check if installed
+bash check_install.sh ktap
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
     
 #ktap
 ktap -V   

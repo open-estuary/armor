@@ -8,6 +8,14 @@
 ################################################################################
 #!/bin/bash
 
+#check if installed
+bash check_install.sh du
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
 #du
 # Testing du
 du --v

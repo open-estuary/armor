@@ -7,6 +7,13 @@
 
 ################################################################################
 #!/bin/bash
+
+bash check_install.sh swapon
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
     
 #swapon, swapoff
 # Testing swapon and swapoff

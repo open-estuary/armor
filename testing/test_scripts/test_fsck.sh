@@ -7,6 +7,14 @@
 
 ################################################################################
 #!/bin/bash
+
+#check if installed
+bash check_install.sh fsck
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
     
 #fsck   
 echo " - display the status of a partition with a problem if any in the stdout without fixing it."

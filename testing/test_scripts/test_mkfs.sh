@@ -6,6 +6,14 @@
 
 ################################################################################
 #!/bin/bash
+
+#check if installed
+bash check_install.sh mkfs
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
     
 #mkfs
 # Testing mkfs

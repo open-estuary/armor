@@ -8,6 +8,14 @@
 ################################################################################
 #!/bin/bash
     
+#check if installed
+bash check_install.sh ftrace
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
 #ftrace - Linux kernel internal tracer   
 # Testing ftrace 
 echo "Ftrace test- reading function trace"

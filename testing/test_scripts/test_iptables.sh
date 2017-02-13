@@ -7,6 +7,15 @@
 
 ################################################################################
 #!/bin/bash
+
+#check if installed
+bash check_install.sh iptables
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
     
 #iptables
 # Testing iptables

@@ -7,6 +7,14 @@
 
 ################################################################################
 #!/bin/bash
+
+#check if installed
+bash check_install.sh lspci
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
     
 #lcpci   
 lspci --version

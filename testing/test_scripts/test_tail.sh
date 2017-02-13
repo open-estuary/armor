@@ -7,7 +7,14 @@
 
 ################################################################################
 #!/bin/bash
-    
+
+bash check_install.sh tail
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+   
 #tail
 tail --version
 status=$?

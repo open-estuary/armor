@@ -7,6 +7,15 @@
 
 ################################################################################
 #!/bin/bash
+
+#check if installed
+bash check_install.sh awk
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
     
 #awk
 awk -W version

@@ -7,7 +7,15 @@
 
 ################################################################################
 #!/bin/bash
-    
+ 
+#check if installed
+bash check_install.sh lttng
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+   
 lttng list --kernel
 status=$?
 if test $status -ne 0

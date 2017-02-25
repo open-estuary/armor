@@ -26,7 +26,7 @@ INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PREFIX = /usr
 
-CC = aarch64-linux-gnu-gcc
+CC = $(CROSS_COMPILE)gcc
 CPPFLAGS =  
 
 LDFLAGS = 

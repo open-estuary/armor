@@ -6,9 +6,14 @@
 #!/bin/bash
 
 export ARCH=arm64
-export CROSS_COMPILE=aarch64-linux-gnu-
 
-if [ "$1" = '' ]; then
+if [ -z "${1}" ]; then
+    unset CROSS_COMPILE
+else
+    export CROSS_COMPILE=${1}
+fi
+
+if [ "$2" = '' ]; then
     echo "Invalid parameter passed. Usage sh build_armor_utility.sh <distribution directory>" 
     exit
 fi
@@ -20,7 +25,7 @@ make clean
 make
 
 # copy binaries and config files to the rootfs.
-sudo cp bin/armor_utility  $1/usr/bin
+sudo cp bin/armor_utility  $2/usr/bin
 cd -
 
 

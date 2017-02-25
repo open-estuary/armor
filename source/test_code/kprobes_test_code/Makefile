@@ -7,7 +7,7 @@ all:    clean kprobe_test
 
 kprobe_test: clean
 	make -C $(KPROBES_KERN_DIR) SUBDIRS=`pwd` modules
-	aarch64-linux-gnu-gcc kprobe_test.c -o kprobe_test
+	$(CROSS_COMPILE)gcc kprobe_test.c -o kprobe_test
 
 install:
 	insmod kprobe_test.ko

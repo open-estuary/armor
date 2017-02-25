@@ -15,8 +15,8 @@ else
     TGT_DIR = ndbg
 endif
 
-C_COMPILER = aarch64-linux-gnu-gcc
-LINK = aarch64-linux-gnu-gcc -o
+C_COMPILER = $(CROSS_COMPILE)gcc
+LINK = $(CROSS_COMPILE)gcc -o
 LINK_OPTS = -pthread
 EXE =
 #EXTRA_LIB_NAMES = ncurses

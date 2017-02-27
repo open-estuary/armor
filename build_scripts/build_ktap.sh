@@ -34,7 +34,7 @@ make
 # copy prebuilt binary on D02 to rootfs.
 sudo cp ktap  $3/usr/bin
 sudo cp ktapvm.ko $3/lib/modules/$kernel_version/armor
-sudo cp samples/helloworld.kp  $3/usr/local/armor/test_scripts 
+sudo cp samples/helloworld.kp  $3/test_scripts 
 cd -
 
 

@@ -30,8 +30,8 @@ cd ../source/test_code/kprobes_test_code/
 make
 
 # copy prebuilt binary on to the rootfs.
-sudo cp kprobe_test  $3/usr/local/armor/test_scripts
-sudo cp kprobe_test.ko $3/usr/local/armor/test_scripts
+sudo cp kprobe_test  $3/test_scripts
+sudo cp kprobe_test.ko $3/test_scripts
 
 cd -
 

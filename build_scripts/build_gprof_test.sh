@@ -26,7 +26,7 @@ cd ../source/test_code/gprof_test_code/
 make
 
 # copy prebuilt binary on D02 to rootfs.
-sudo cp gprof_test  $2/usr/local/armor/test_scripts
+sudo cp gprof_test  $2/test_scripts
 
 cd -
 echo "Building the Kprobes's test code finished"

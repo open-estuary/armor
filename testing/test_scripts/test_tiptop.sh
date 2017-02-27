@@ -7,7 +7,14 @@
 
 ################################################################################
 #!/bin/bash
-    
+
+bash check_install.sh tiptop
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+   
 #tiptop
 tiptop --version
 status=$?

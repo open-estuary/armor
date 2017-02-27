@@ -8,6 +8,14 @@
 ################################################################################
 #!/bin/bash
     
+#check if installed
+bash check_install.sh netstat
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
 #netstat
 # Testing netstat
 # version return status failed on D02  

@@ -8,6 +8,15 @@
 ################################################################################
 #!/bin/bash
     
+#check if installed
+bash check_install.sh dmidecode
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
+
 #dmidecode
 /usr/bin/dmidecode -V
 status=$?

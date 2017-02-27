@@ -7,6 +7,14 @@
 
 ################################################################################
 #!/bin/bash
+
+#check if installed
+bash check_install.sh pidstat
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
     
 #pidstat - report statistics for Linux tasks   
 # Testing pidstat 

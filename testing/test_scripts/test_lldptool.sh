@@ -8,6 +8,14 @@
 ################################################################################
 #!/bin/bash
     
+#check if installed
+bash check_install.sh lldptool
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
 #lldptool
 lldptool -v
 status=$?

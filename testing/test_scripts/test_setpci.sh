@@ -7,7 +7,14 @@
 
 ################################################################################
 #!/bin/bash
-    
+
+bash check_install.sh setpci
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+   
 #setpci
 setpci --version
 status=$?

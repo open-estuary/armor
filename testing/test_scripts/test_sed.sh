@@ -7,6 +7,13 @@
 
 ################################################################################
 #!/bin/bash
+
+bash check_install.sh sed
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
     
 #sed
 sed --version

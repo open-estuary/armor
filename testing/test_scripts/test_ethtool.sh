@@ -8,6 +8,14 @@
 ################################################################################
 #!/bin/bash
     
+#check if installed
+bash check_install.sh ethtool
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
 #ethtool - query and control network driver and hardware settings.   
 # Testing ethtool 
 ethtool --version 

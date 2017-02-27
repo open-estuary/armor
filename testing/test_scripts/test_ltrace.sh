@@ -7,7 +7,15 @@
 
 ################################################################################
 #!/bin/bash
-    
+
+#check if installed
+bash check_install.sh ltrace
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+   
 # Testing ltrace
 # aarch64-linux-gnu-gcc file.c -Wall -o file
 ltrace --v

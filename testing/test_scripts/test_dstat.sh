@@ -7,7 +7,15 @@
 
 ################################################################################
 #!/bin/bash
-    
+
+#check if installed
+bash check_install.sh dstat
+status=$?
+if test $status -eq 1
+then
+        exit
+fi    
+
 #dstat
 dstat -v
 status=$?

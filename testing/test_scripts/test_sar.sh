@@ -8,6 +8,13 @@
 ################################################################################
 #!/bin/bash
 
+bash check_install.sh sar
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
 #sar
 sar -V
 status=$?

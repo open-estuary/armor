@@ -8,6 +8,14 @@
 ################################################################################
 #!/bin/bash
     
+#check if installed
+bash check_install.sh crash
+status=$?
+if test $status -eq 1
+then
+	exit
+fi
+
 #crash
 crash  -v
 status=$?

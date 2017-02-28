@@ -8,6 +8,14 @@
 ################################################################################
 #!/bin/bash
 
+#check if installed
+bash check_install.sh packETHcli
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+
 if [ "$1" = '' ]; then
     echo "Invalid parameter passed. Usage sh test_packETHcli.sh <Eth device>" 
     exit

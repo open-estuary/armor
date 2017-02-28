@@ -7,6 +7,13 @@
 
 ################################################################################
 #!/bin/bash
+
+bash check_install.sh tcpdump
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
     
 #tcpdump - dump traffic on a network.   
 tcpdump --version

@@ -7,6 +7,14 @@
 
 ################################################################################
 #!/bin/bash
+
+#check if installed
+bash check_install.sh blktrace
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
     
 #blktrace
 blktrace -v

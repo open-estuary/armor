@@ -7,7 +7,15 @@
 
 ################################################################################
 #!/bin/bash
-    
+ 
+#check if installed
+bash check_install.sh mount
+status=$?
+if test $status -eq 1
+then
+        exit
+fi
+   
 #mount
 # Testing mount
 mount -V
